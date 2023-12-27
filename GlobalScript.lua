@@ -1200,67 +1200,88 @@ function LoadKUTA()
     --Move Makuta Table, Hand, Cards, & Button
     Wait.time(
         function()
-            local Rockshi = 0.1
-            if math.random() < Rockshi then
-                local RockshiActive = getObjectFromGUID("016e83").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})    
-                RockshiActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                RockshiActive.removeTag("Dev")
-            end
-            local Kayahk = 0.1
-            if math.random() < Kayahk then
-                local KayahkActive = getObjectFromGUID("2b8812").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                KayahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                KayahkActive.removeTag("Dev")
-            end
-            local YeOlrahk = 0.1
-            if math.random() < YeOlrahk then
-                local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                YeOlrahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                YeOlrahkActive.removeTag("Dev")
-            end
-    
-            local Cards = {
-                getObjectFromGUID("ce790f").clone({position = {-39.28, -8.00, 8.31}, rotation = {0.0, 270.0, 180.0}}),
-                getObjectFromGUID("b189ab").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}}),
-                getObjectFromGUID("9ec01a").clone({position = {-34.54, -8.00, 2.60}, rotation = {0.0, 270.0, 0.0}}),
-                getObjectFromGUID("cd994b").clone({position = {-34.54, -8.00, 0.86}, rotation = {0.0, 270.0, 0.0}}),
-                getObjectFromGUID("a77e27").clone({position = {-34.54, -8.00, -0.87}, rotation = {0.0, 270.0, 0.0}}),
-                getObjectFromGUID("9e0c24").clone({position = {-34.54, -8.00, -2.62}, rotation = {0.0, 270.0, 0.0}}),
-            }
-
-            local Kraata = Cards[1]
-            local Rahkshi = Cards[2]
-            local Token1 = Cards[3]
-            local Token2 = Cards[4]
-            local Token3 = Cards[5]
-            local Token4 = Cards[6]
-            Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
-            Rahkshi:setPositionSmooth({-39.28, 6.00, -5.41})
-            Token1:setPositionSmooth({-34.54, 6.00, 2.60})
-            Token2:setPositionSmooth({-34.54, 6.00, 0.86})
-            Token3:setPositionSmooth({-34.54, 6.00, -0.87})
-            Token4:setPositionSmooth({-34.54, 6.00, -2.62})
-            getObjectFromGUID("c5b23e"):setPositionSmooth({-43.97, 4.00, 0.0})
-            getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
-            getObjectFromGUID("256153").setState(1)
-            getObjectFromGUID("7ffc4c"):setPositionSmooth({20.12, -0.60, 0.0})
-            
-            --Add Tags, Tooltip & Shuffle
-            for i=1, #Cards, 1 do
-                if Cards[i] ~= nil then
-                    Cards[i].addTag("InPlay")
-                    Cards[i].removeTag("Dev")
-                    Cards[i].tooltip = true
-                    if Cards[i].hasTag("Shuffle") then
-                        Wait.time(
-                            function()   
-                                Cards[i].randomize()
-                            end,
-                            2
-                        )
+            local MakutaTablePortal = getObjectFromGUID("207f49").clone({position = {-1000.00, -30.00, 0.00}, rotation = {0.0, 0.0, 0.0}, scale = {10.0, 15.0, 23.0}})
+            MakutaTablePortal.locked = true
+            Wait.time(
+                function() 
+                    MakutaTablePortal.AssetBundle.playTriggerEffect(0)
+                    MakutaTablePortal.setPosition({-38.00, -4.50, 0.00})
+                end,
+                0.1
+            )
+            Wait.time(
+                function()                     
+                    MakutaTablePortal.setPosition({-1000.00, -30.00, 0.00})
+                end,
+                2.00
+            )
+            MakutaTablePortal.removeTag("Dev")
+            Wait.time(
+                function()
+                    local Rockshi = 0.1
+                    if math.random() < Rockshi then
+                        local RockshiActive = getObjectFromGUID("016e83").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})    
+                        RockshiActive:setPositionSmooth({-39.28, 6.00, -5.41})
+                        RockshiActive.removeTag("Dev")
                     end
-                end
-            end
+                    local Kayahk = 0.1
+                    if math.random() < Kayahk then
+                        local KayahkActive = getObjectFromGUID("2b8812").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        KayahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
+                        KayahkActive.removeTag("Dev")
+                    end
+                    local YeOlrahk = 0.1
+                    if math.random() < YeOlrahk then
+                        local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        YeOlrahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
+                        YeOlrahkActive.removeTag("Dev")
+                    end
+            
+                    local Cards = {
+                        getObjectFromGUID("ce790f").clone({position = {-39.28, -8.00, 8.31}, rotation = {0.0, 270.0, 180.0}}),
+                        getObjectFromGUID("b189ab").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}}),
+                        getObjectFromGUID("9ec01a").clone({position = {-34.54, -8.00, 2.60}, rotation = {0.0, 270.0, 0.0}}),
+                        getObjectFromGUID("cd994b").clone({position = {-34.54, -8.00, 0.86}, rotation = {0.0, 270.0, 0.0}}),
+                        getObjectFromGUID("a77e27").clone({position = {-34.54, -8.00, -0.87}, rotation = {0.0, 270.0, 0.0}}),
+                        getObjectFromGUID("9e0c24").clone({position = {-34.54, -8.00, -2.62}, rotation = {0.0, 270.0, 0.0}}),
+                    }
+
+                    local Kraata = Cards[1]
+                    local Rahkshi = Cards[2]
+                    local Token1 = Cards[3]
+                    local Token2 = Cards[4]
+                    local Token3 = Cards[5]
+                    local Token4 = Cards[6]
+                    Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
+                    Rahkshi:setPositionSmooth({-39.28, 6.00, -5.41})
+                    Token1:setPositionSmooth({-34.54, 6.00, 2.60})
+                    Token2:setPositionSmooth({-34.54, 6.00, 0.86})
+                    Token3:setPositionSmooth({-34.54, 6.00, -0.87})
+                    Token4:setPositionSmooth({-34.54, 6.00, -2.62})
+                    getObjectFromGUID("c5b23e"):setPositionSmooth({-43.97, 4.00, 0.0})
+                    getObjectFromGUID("256153").setState(1)
+                    getObjectFromGUID("7ffc4c"):setPositionSmooth({20.12, -0.60, 0.0})        
+                    local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
+                    
+                    --Add Tags, Tooltip & Shuffle
+                    for i=1, #Cards, 1 do
+                        if Cards[i] ~= nil then
+                            Cards[i].addTag("InPlay")
+                            Cards[i].removeTag("Dev")
+                            Cards[i].tooltip = true
+                            if Cards[i].hasTag("Shuffle") then
+                                Wait.time(
+                                    function()   
+                                        Cards[i].randomize()
+                                    end,
+                                    2
+                                )
+                            end
+                        end
+                    end
+                end,
+                0.5
+            )
         end,
         4.00
     )
