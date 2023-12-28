@@ -1,10 +1,10 @@
 --MegaFreeze: Makes Objects Non-Interactive
---Object List: TABLE, PILLARS 1-4, GROUND, BOARD 1-3, , MAKUTA TABLE, STORAGE TABLE 1 & 2
-TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', '899089', 'e2d925', 'f01443'}
+--Object List: TABLE, PILLARS 1-4, GROUND, BOARD 1-4, , MAKUTA TABLE, STORAGE TABLE 1 & 2
+TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', 'a31342', '899089', 'e2d925', 'f01443'}
 
---Object List: THRACKERZOD, STUDIO TILES 1-4, TAB SOUND 1-3, TAB WIKI, TURNBUTTON 1-8, MODEBUTTON, DEVBUTTON, BOWLS 1-6, BOHROCKS, BOHCAN, BOHLID, BOHROK
+--Object List: THRACKERZOD, STUDIO TILES 1-4, TAB SOUND 1-3, TAB WIKI, TURNBUTTON 1-8, MODEBUTTON, DEVBUTTON, BOWLS 1-7, BOHROCKS, BOHCAN, BOHLID, BOHROK
 ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '13ca74', '880c5e', 'e8c077','bcf9f3', 'c24cdc',
-'711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153', '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', '3b0f24', '0bf751', '8109ec', '1971d9'}
+'711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153', '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
 
 --Force Tag Exclusion
 --Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-3, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
@@ -112,9 +112,22 @@ function Cleanup()
     BohrokCL.setPosition({32.00, -5.00, 0.00})
     BohrokCL.setRotation({30.00, 270.00, 0.00})
 
-    --Reset Makuta Table, Hand, & Button
+    --Reset Makuta Table, Hand, Objects, & Button
     getObjectFromGUID("899089"):setPosition({-36.00, -18.0, 0.0})
     getObjectFromGUID("c5b23e"):setPosition({-43.97, 300.00, 0.0})
+    local MakutaBowl = getObjectFromGUID("a7d9de")
+    MakutaBowl:setPosition({-36.42, -17.0, 3.00})
+    MakutaBowl.locked = true
+    local MakutaDie = getObjectFromGUID("26a094")            
+    MakutaDie:setPosition({-36.42, -17.0, 3.00})    
+    MakutaDie.locked = true
+    MakutaDie.interactable = false
+    MakutaDie.tooltip = false
+    local MakutaBag = getObjectFromGUID("916518")
+    MakutaBag:setPosition({-36.42, -17.0, -3.00})
+    MakutaBag.locked = true
+    MakutaBag.interactable = false
+    MakutaBag.tooltip = false
     if getObjectFromGUID("7ffc4c") ~= nil then
         getObjectFromGUID("7ffc4c").setState(2)
     end
@@ -1158,9 +1171,9 @@ function LoadKUTA()
             Makuta.removeTag("Dev")
             Makuta.tooltip = true
             Makuta.locked = true
-            local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-0.80, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
+            local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
             TakaPortal.locked = true
-            local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
+            local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
             MakutaPortal.locked = true
             Wait.time(
                 function() 
@@ -1178,9 +1191,9 @@ function LoadKUTA()
                     Wait.time(
                         function()
                             Takanuva.locked = false
-                            TakaPortal.setPosition({-0.80, 5.00, -9.13})                            
+                            TakaPortal.setPosition({-1000, 5.00, -9.13})                            
                             Makuta.locked = false
-                            MakutaPortal.setPosition({-5.16, 5.00, 0.00})
+                            MakutaPortal.setPosition({-1000, 5.00, 0.00})
                         end,
                         1.20
                     )
@@ -1188,7 +1201,7 @@ function LoadKUTA()
                 0.5
             )
             TakaPortal.removeTag("Dev")
-            MakutaPortal.removeTag("Dev")
+            MakutaPortal.removeTag("Dev")        
         end,
         4.0
     )
@@ -1197,7 +1210,7 @@ function LoadKUTA()
     UI.hide("GameModeSwitch")
     getObjectFromGUID("3bb2af").setState(2)
 
-    --Move Makuta Table, Hand, Cards, & Button
+    --Move Makuta Table, Hand, Cards, Objects, & Button
     Wait.time(
         function()
             local MakutaTablePortal = getObjectFromGUID("207f49").clone({position = {-1000.00, -30.00, 0.00}, rotation = {0.0, 0.0, 0.0}, scale = {10.0, 15.0, 23.0}})
@@ -1260,7 +1273,19 @@ function LoadKUTA()
                     Token4:setPositionSmooth({-34.54, 6.00, -2.62})
                     getObjectFromGUID("c5b23e"):setPositionSmooth({-43.97, 4.00, 0.0})
                     getObjectFromGUID("256153").setState(1)
-                    getObjectFromGUID("7ffc4c"):setPositionSmooth({20.12, -0.60, 0.0})        
+                    getObjectFromGUID("7ffc4c"):setPositionSmooth({20.12, -0.60, 0.0})     
+                    local MakutaBowl = getObjectFromGUID("a7d9de"):setPositionSmooth({-36.43, 5.00, 3.00})
+                    local MakutaDie = getObjectFromGUID("26a094")
+                    MakutaDie:setPositionSmooth({-36.43, 5.75, 3.00})
+                    MakutaDie:setRotation({0.00, 90.00, 180.00})
+                    MakutaDie.locked = false
+                    MakutaDie.interactable = true
+                    MakutaDie.tooltip = true
+                    local MakutaBag = getObjectFromGUID("916518")
+                    MakutaBag:setPositionSmooth({-36.43, 5.00, -3.00})    
+                    MakutaBag.locked = false
+                    MakutaBag.interactable = true
+                    MakutaBag.tooltip = true                                        
                     local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
                     
                     --Add Tags, Tooltip & Shuffle
