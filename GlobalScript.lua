@@ -236,6 +236,22 @@ function LoadQFTM()
         getObjectFromGUID("dd6a94").clone({position = {4.28, 133.00, -2.35}, rotation = {0.0, 300.0, 0.03}, scale = {0.0, 0.0, 0.0}})
     }
 
+	local ToaTokens = {
+		getObjectFromGUID("48695e").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.0, 0.0}}),
+		getObjectFromGUID("989f32").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
+		getObjectFromGUID("1b60da").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
+		getObjectFromGUID("faa7cb").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
+		getObjectFromGUID("f7ee99").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.0, 0.0}}),
+		getObjectFromGUID("52ae02").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+	}
+	
+	for i=1, #ToaTokens, 1 do
+		ToaTokens[i].addTag("InPlay")
+		ToaTokens[i].removeTag("Dev")
+		ToaTokens[i].tooltip = true
+		ToaTokens[i].locked = true
+	end  
+			
     --Unlock Canisters & Play Sound
     for i=1, #Canisters, 1 do
         Canisters[i].locked = false      
@@ -254,16 +270,7 @@ function LoadQFTM()
     end
   
     Wait.time(
-        function()    
-            local ToaTokens = {
-                getObjectFromGUID("48695e").clone({position = {0.74, 9.15, -7.07}, rotation = {0.0, 315.0, 0.0}}),
-                getObjectFromGUID("989f32").clone({position = {6.64, 9.15, 5.91}, rotation = {0.0, 225.0, 0.0}}),
-                getObjectFromGUID("1b60da").clone({position = {11.36, 9.15, 0.0}, rotation = {0.0, 270.0, 0.0}}),
-                getObjectFromGUID("faa7cb").clone({position = {-0.44, 9.15, 7.09}, rotation = {0.0, 180.0, 0.0}}),
-                getObjectFromGUID("f7ee99").clone({position = {-9.88, 9.15, 0.0}, rotation = {0.0, 90.0, 0.0}}),
-                getObjectFromGUID("52ae02").clone({position = {4.28, 9.15, -2.35}, rotation = {0.0, 300.0, 0.03}})
-            }
-
+        function()  
             --Destroy Canisters
             for i=1, #Canisters, 1 do
                 Canisters[i].destruct()
@@ -271,17 +278,14 @@ function LoadQFTM()
 
             --Add Tags To Cloned Objects
             for i=1, #ToaTokens, 1 do
-                if ToaTokens[i] ~= nil then
-                    ToaTokens[i].addTag("InPlay")
-                    ToaTokens[i].removeTag("Dev")
-                    ToaTokens[i].tooltip = true
-                    Wait.time(
-                        function()  
-                            ToaTokens[i].AssetBundle.playTriggerEffect(0)
-                        end,
-                        0.01
-                    )
-                end
+				Wait.time(
+					function()
+						ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
+						ToaTokens[i].AssetBundle.playTriggerEffect(0)
+						ToaTokens[i].locked = false
+					end,
+					0.01
+				)
             end                            
         end,
         4.4
@@ -396,6 +400,22 @@ function LoadBOSW()
         getObjectFromGUID("dd6a94").clone({position = {-9.88, 133.00, 0.0}, rotation = {0.0, 90.0, 0.0}, scale = {0.0, 0.0, 0.0}}),
         getObjectFromGUID("dd6a94").clone({position = {4.28, 133.00, -2.35}, rotation = {0.0, 300.0, 0.03}, scale = {0.0, 0.0, 0.0}})      
     }
+	
+	local ToaTokens = {
+		getObjectFromGUID("7d6efe").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.00, 0.0}}),
+		getObjectFromGUID("d7272f").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
+		getObjectFromGUID("332ce1").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
+		getObjectFromGUID("2ad542").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
+		getObjectFromGUID("c7bbbe").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.00, 0.0}}),
+		getObjectFromGUID("ef13db").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+	}
+
+	for i=1, #ToaTokens, 1 do
+		ToaTokens[i].addTag("InPlay")
+		ToaTokens[i].removeTag("Dev")
+		ToaTokens[i].tooltip = true
+		ToaTokens[i].locked = true
+	end  
 
     --Unlock Canisters & Play Sound
     for i=1, #Canisters, 1 do
@@ -416,15 +436,6 @@ function LoadBOSW()
   
     Wait.time(
         function()    
-            local ToaTokens = {
-                getObjectFromGUID("7d6efe").clone({position = {0.74, 9.15, -7.07}, rotation = {0.0, 315.00, 0.0}}),
-                getObjectFromGUID("d7272f").clone({position = {6.64, 9.15, 5.91}, rotation = {0.0, 225.0, 0.0}}),
-                getObjectFromGUID("332ce1").clone({position = {11.36, 9.15, 0.0}, rotation = {0.0, 270.0, 0.0}}),
-                getObjectFromGUID("2ad542").clone({position = {-0.44, 9.15, 7.09}, rotation = {0.0, 180.0, 0.0}}),
-                getObjectFromGUID("c7bbbe").clone({position = {-9.88, 9.15, 0.0}, rotation = {0.0, 90.00, 0.0}}),
-                getObjectFromGUID("ef13db").clone({position = {4.28, 9.15, -2.35}, rotation = {0.0, 300.0, 0.03}})
-            }
-            
             --Destroy Canisters
             for i=1, #Canisters, 1 do
                 Canisters[i].destruct()
@@ -433,18 +444,16 @@ function LoadBOSW()
             --Add Tags To Cloned Objects
             for i=1, #ToaTokens, 1 do
                 if ToaTokens[i] ~= nil then
-                    ToaTokens[i].addTag("InPlay")
-                    ToaTokens[i].removeTag("Dev")
-                    ToaTokens[i].tooltip = true
                     Wait.time(
                         function()  
+							ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
                             ToaTokens[i].AssetBundle.playTriggerEffect(0)
+							ToaTokens[i].locked = false
                         end,
                         0.01
                     )
                 end
             end                              
-
         end,
         4.4
     )
@@ -580,24 +589,29 @@ function LoadRSHL()
     getObjectFromGUID("ff04f2").setRotation({28.83, 329.95, 359.98})
 
     --Spawn Lightshafts & Toa Tokens
+	local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
+    local Lightshaft2 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 5.91}, rotation = {0.0, 225.0, 0.0}})
+	local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
+	local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
+	local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
+	local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+	
     --Tahu
     Wait.time(
         function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {0.74, 8.70, -7.07}, rotation = {0.0, 315.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+            Lightshaft1.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft1.AssetBundle.playTriggerEffect(0)
+                    Lightshaft1.setPosition({0.74, 1.75, -7.07})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft1.setPosition({1000, -1.75, -7.07})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -609,7 +623,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -621,21 +635,19 @@ function LoadRSHL()
     --Onua
     Wait.time(
         function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {6.64, 8.70, 5.91}, rotation = {0.0, 225.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+            Lightshaft2.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft2.AssetBundle.playTriggerEffect(0)
+                    Lightshaft2.setPosition({6.64, 1.75, 5.91})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft2.setPosition({1000, -1.75, 5.91})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -647,7 +659,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -658,22 +670,20 @@ function LoadRSHL()
 
     --Pohatu
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {11.36, 8.70, 0.0}, rotation = {0.0, 270.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()              
+            Lightshaft3.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft3.AssetBundle.playTriggerEffect(0)
+                    Lightshaft3.setPosition({11.36, 1.75, 0.0})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft3.setPosition({1000, -1.75, 0.0})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -685,7 +695,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -696,22 +706,20 @@ function LoadRSHL()
 
     --Kopaka
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {-0.44, 8.70, 7.09}, rotation = {0.0, 180.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()             
+            Lightshaft4.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft4.AssetBundle.playTriggerEffect(0)
+                    Lightshaft4.setPosition({-0.44, 1.75, 7.09})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft4.setPosition({1000, -1.75, 7.09})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -723,7 +731,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -734,22 +742,20 @@ function LoadRSHL()
 
     --Lewa
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {-9.88, 8.70, 0.0}, rotation = {0.0, 90.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()             
+            Lightshaft5.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft5.AssetBundle.playTriggerEffect(0)
+                    Lightshaft5.setPosition({-9.88, 1.75, 0.0})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft5.setPosition({1000,  -1.75, 0.0})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -761,7 +767,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -772,22 +778,20 @@ function LoadRSHL()
 
     --Gali
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {4.28, 8.70, -2.35}, rotation = {0.0, 300.0, 0.03}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()              
+            Lightshaft6.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft6.AssetBundle.playTriggerEffect(0)
+                    Lightshaft6.setPosition({4.28, 1.75, -2.35})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft6.setPosition({1000, -1.75, -2.35})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -799,7 +803,7 @@ function LoadRSHL()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -932,24 +936,29 @@ function LoadKUTA()
     getObjectFromGUID("ff04f2").setRotation({28.83, 329.95, 359.98})
 
     --Spawn Lightshafts & Toa Tokens
+	local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
+    local Lightshaft2 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 5.91}, rotation = {0.0, 225.0, 0.0}})
+	local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
+	local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
+	local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
+	local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+	
     --Tahu
     Wait.time(
         function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {0.74, 8.70, -7.07}, rotation = {0.0, 315.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+            Lightshaft1.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft1.AssetBundle.playTriggerEffect(0)
+                    Lightshaft1.setPosition({0.74, 1.75, -7.07})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft1.setPosition({1000, -1.75, -7.07})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -961,7 +970,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -973,21 +982,19 @@ function LoadKUTA()
     --Onua
     Wait.time(
         function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {6.64, 8.70, 5.91}, rotation = {0.0, 225.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+            Lightshaft2.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft2.AssetBundle.playTriggerEffect(0)
+                    Lightshaft2.setPosition({6.64, 1.75, 5.91})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft2.setPosition({1000, -1.75, 5.91})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -999,7 +1006,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -1010,22 +1017,20 @@ function LoadKUTA()
 
     --Pohatu
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {11.36, 8.70, 0.0}, rotation = {0.0, 270.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()              
+            Lightshaft3.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft3.AssetBundle.playTriggerEffect(0)
+                    Lightshaft3.setPosition({11.36, 1.75, 0.0})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft3.setPosition({1000, -1.75, 0.0})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -1037,7 +1042,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -1048,22 +1053,20 @@ function LoadKUTA()
 
     --Kopaka
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {-0.44, 8.70, 7.09}, rotation = {0.0, 180.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()             
+            Lightshaft4.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft4.AssetBundle.playTriggerEffect(0)
+                    Lightshaft4.setPosition({-0.44, 1.75, 7.09})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft4.setPosition({1000, -1.75, 7.09})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -1075,7 +1078,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -1086,22 +1089,20 @@ function LoadKUTA()
 
     --Lewa
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {-9.88, 8.70, 0.0}, rotation = {0.0, 90.0, 0.0}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()             
+            Lightshaft5.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft5.AssetBundle.playTriggerEffect(0)
+                    Lightshaft5.setPosition({-9.88, 1.75, 0.0})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft5.setPosition({1000,  -1.75, 0.0})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -1113,7 +1114,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -1124,22 +1125,20 @@ function LoadKUTA()
 
     --Gali
     Wait.time(
-        function()  
-            local Lightshaft = getObjectFromGUID("911407").clone({position = {4.28, 8.70, -2.35}, rotation = {0.0, 300.0, 0.03}})
-            Lightshaft.removeTag("Dev")
-            Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+        function()              
+            Lightshaft6.removeTag("Dev")
             Wait.time(
                 function()   
-                    Lightshaft.AssetBundle.playTriggerEffect(0)
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, 5, 0))
+                    Lightshaft6.AssetBundle.playTriggerEffect(0)
+                    Lightshaft6.setPosition({4.28, 1.75, -2.35})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()   
-                    Lightshaft.setPosition(Lightshaft.getPosition() + vector(0, -5, 0))
+                    Lightshaft6.setPosition({1000, -1.75, -2.35})
                 end,
-                2.1
+                2.6
             )
             Wait.time(
                 function()  
@@ -1151,7 +1150,7 @@ function LoadKUTA()
                         function()  
                             Toa.locked = false
                         end,
-                        0.5
+                        1.1
                     )
                 end,
                 1.9
@@ -1161,20 +1160,22 @@ function LoadKUTA()
     )
 
     --Spawn Takanuva & Makuta
+	local Makuta = getObjectFromGUID("7feda9").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
+	Makuta.removeTag("Dev")
+	Makuta.tooltip = true
+	Makuta.locked = true
+	local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
+	TakaPortal.locked = true
+	local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
+	MakutaPortal.locked = true
+    local MakutaTablePortal = getObjectFromGUID("207f49").clone({position = {-1000.00, -30.00, 0.00}, rotation = {0.0, 0.0, 0.0}, scale = {10.0, 15.0, 23.0}})
+    MakutaTablePortal.locked = true
     Wait.time(
         function()
             local Takanuva = getObjectFromGUID("2b06ad").clone({position = {-0.80, 5.00, -9.13}, rotation = {0.0, 0.0, 0.0}})
             Takanuva.removeTag("Dev")    
             Takanuva.tooltip = true
             Takanuva.locked = true
-            local Makuta = getObjectFromGUID("7feda9").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
-            Makuta.removeTag("Dev")
-            Makuta.tooltip = true
-            Makuta.locked = true
-            local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
-            TakaPortal.locked = true
-            local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
-            MakutaPortal.locked = true
             Wait.time(
                 function() 
                     TakaPortal.AssetBundle.playTriggerEffect(0)
@@ -1182,7 +1183,7 @@ function LoadKUTA()
                     MakutaPortal.AssetBundle.playTriggerEffect(0)
                     MakutaPortal.setPosition({-5.16, 0.90, 0.00})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()
@@ -1213,14 +1214,12 @@ function LoadKUTA()
     --Move Makuta Table, Hand, Cards, Objects, & Button
     Wait.time(
         function()
-            local MakutaTablePortal = getObjectFromGUID("207f49").clone({position = {-1000.00, -30.00, 0.00}, rotation = {0.0, 0.0, 0.0}, scale = {10.0, 15.0, 23.0}})
-            MakutaTablePortal.locked = true
             Wait.time(
                 function() 
                     MakutaTablePortal.AssetBundle.playTriggerEffect(0)
                     MakutaTablePortal.setPosition({-38.00, -4.50, 0.00})
                 end,
-                0.1
+                0.5
             )
             Wait.time(
                 function()                     
