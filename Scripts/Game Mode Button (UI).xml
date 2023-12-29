@@ -1,0 +1,10 @@
+<Panel id="GameModeSwitch" active="false" width="640" height="427" allowDragging="true" returnToOriginalPositionWhenReleased="false" color="#ffffff00">
+<Image image="Menubox" padding="0 0 26 26" rectAlignment="center"></Image>
+    <VerticalLayout padding="52 52 132 58">
+        <Button id="LoadQFTM" onClick="LoadQFTM" width="503" height="43" transition="SpriteSwap" image="Button1" highlightedSprite	="Button1a" pressedSprite="Button1b"/>
+        <Button id="LoadBOSW" onClick="LoadBOSW" width="503" height="43" transition="SpriteSwap" image="Button2" highlightedSprite	="Button2a" pressedSprite="Button2b"/>
+        <Button id="LoadRSHL" onClick="LoadRSHL" width="503" height="43" transition="SpriteSwap" image="Button3" highlightedSprite	="Button3a" pressedSprite="Button3b"/>
+        <Button id="LoadKUTA" onClick="LoadKUTA" width="503" height="43" transition="SpriteSwap" image="Button4" highlightedSprite	="Button4a" pressedSprite="Button4b"/>
+        <Button id="CloseWin" onClick="CloseWin" width="503" height="43" transition="SpriteSwap" image="Button5" highlightedSprite	="Button5a" pressedSprite="Button5b"/>
+    </VerticalLayout>
+</Panel>

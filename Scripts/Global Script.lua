@@ -462,20 +462,20 @@ function LoadBOSW()
     BohrokCL.locked = false
     BohrokCON.setState(2)
     Bohrok.setInvisibleTo()
-    Wait.frames(
+    Wait.time(
         function()
             BohrokCL.addForce({-26,26,0})
             BohrokCL.addTorque({3,-1,0.5})
         end,
-        1
+        0.1
     )    
-    Wait.frames(
+    Wait.time(
         function()    
             Bohrok.addForce({-19,25,0})
             Bohrok.addTorque({0,0,3})     
             Bohrok.AssetBundle.playTriggerEffect(0)                              
         end,
-        1
+        0.1
     )
 
     --Hide Mode Select Window
@@ -816,20 +816,20 @@ function LoadRSHL()
     BohrokCL.locked = false
     BohrokCON.setState(2)
     Bohrok.setInvisibleTo()
-    Wait.frames(
+    Wait.time(
         function()
             BohrokCL.addForce({-26,26,0})
             BohrokCL.addTorque({3,-1,0.5})
         end,
-        1
+        0.1
     )    
-    Wait.frames(
+    Wait.time(
         function()    
             Bohrok.addForce({-19,25,0})
             Bohrok.addTorque({0,0,3})     
             Bohrok.AssetBundle.playTriggerEffect(0)                                                 
         end,
-        1
+        0.1
     )
       
     --Hide Mode Select Window
@@ -1343,73 +1343,80 @@ end
 --Camera Zone Reset
 function onPlayerChangeColor(color)
     if color == "White" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["White"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 120,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Green" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Green"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 60,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Red" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Red"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 0,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Brown" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Brown"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 300,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Blue" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Blue"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 240,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Purple" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Purple"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 31,
                 yaw      = 180,
                 distance = 50
             })
-        end, 8)
+        end, 
+		0.8)
     end
     if color == "Orange" then
-        Wait.frames(function()
+        Wait.time(function()
             Player["Orange"].lookAt({
                 position = {x=0,y=0,z=0},
                 pitch    = 20,
                 yaw      = 90,
                 distance = 59
             })
-        end, 8)
+        end, 
+		0.8)
     end
 end
