@@ -114,7 +114,7 @@ function Cleanup()
 
     --Reset Makuta Table, Hand, Objects, & Button
     getObjectFromGUID("899089"):setPosition({-36.00, -18.0, 0.0})
-    getObjectFromGUID("c5b23e"):setPosition({-43.97, 300.00, 0.0})
+    getObjectFromGUID("c5b23e"):setPosition({-43.97, 1000.00, 0.0})
     local MakutaBowl = getObjectFromGUID("a7d9de")
     MakutaBowl:setPosition({-36.42, -17.0, 3.00})
     MakutaBowl.locked = true
@@ -890,7 +890,7 @@ function LoadKUTA()
     end
 
     --Clone New Objects
-    --Object List: TOA, GM, NM, GA, MISS, GMC, TAKANUVA 1&2, SHADOW TOKENS, ART 1&2, 810, HINT 1&2
+    --Object List: TOA, GM, NM, GA, MISS, GMC, TAKANUVA 1&2, MAKUTA 1&2, SHADOW TOA, SHADOW TOKENS, ART 1&2, 810, HINT 1&2
     local Objects = {
         getObjectFromGUID("6949b1").clone({position = {0.12, 9.15, -14.57}, rotation = {0.0, 180.0, 0.0}}),
         getObjectFromGUID("1405e0").clone({position = {-0.19, 9.15, 14.59}, rotation = {0.0, 0.0, 0.0}}),
@@ -912,8 +912,14 @@ function LoadKUTA()
         getObjectFromGUID("a90c49").clone({position = {-21.59, 7.00, 10.75}, rotation = {0.0, 300.0, 180.0}}),
         getObjectFromGUID("93d91d").clone({position = {-20.11, 7.00, -13.36}, rotation = {0.0, 240.0, 180.0}}),
         getObjectFromGUID("21af86").clone({position = {20.10, 7.00, 13.43}, rotation = {0.0, 60.0, 180.0}}),
-        getObjectFromGUID("f97045").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("13eddd").clone({position = {-4.62, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        
+		getObjectFromGUID("e053fb").clone({position = {-0.80, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("a2893d").clone({position = {-4.62, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+		
+		getObjectFromGUID("cfd609").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("888a13").clone({position = {-4.62, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+		
+		getObjectFromGUID("4c1949").clone({position = {-13.22, 9.15, 0.01}, rotation = {0.0, 180.0, 0.0}}),
 
         getObjectFromGUID("6676ab").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("828dd0").clone({position = {-3.15, 9.15, 9.21}, rotation = {0.0, 270.0, 180.0}}),
@@ -1179,7 +1185,7 @@ function LoadKUTA()
             Wait.time(
                 function() 
                     TakaPortal.AssetBundle.playTriggerEffect(0)
-                    TakaPortal.setPosition({-0.80, 0.87, -9.13})
+                    TakaPortal.setPosition({-0.80, 1.00, -9.13})
                     MakutaPortal.AssetBundle.playTriggerEffect(0)
                     MakutaPortal.setPosition({-5.16, 0.90, 0.00})
                 end,
@@ -1187,8 +1193,8 @@ function LoadKUTA()
             )
             Wait.time(
                 function()
-                    Takanuva.setPositionSmooth({-0.80, 1.00, -9.13})
-                    Makuta.setPositionSmooth({-5.16, 1.00, 0.00})
+                    Takanuva.setPositionSmooth({-0.80, 0.90, -9.13})
+                    Makuta.setPositionSmooth({-5.16, 0.85, 0.00})
                     Wait.time(
                         function()
                             Takanuva.locked = false
@@ -1196,7 +1202,7 @@ function LoadKUTA()
                             Makuta.locked = false
                             MakutaPortal.setPosition({-1000, 5.00, 0.00})
                         end,
-                        1.20
+                        4.00
                     )
                 end,
                 0.5
@@ -1225,7 +1231,7 @@ function LoadKUTA()
                 function()                     
                     MakutaTablePortal.setPosition({-1000.00, -30.00, 0.00})
                 end,
-                2.00
+                4.00
             )
             MakutaTablePortal.removeTag("Dev")
             Wait.time(
