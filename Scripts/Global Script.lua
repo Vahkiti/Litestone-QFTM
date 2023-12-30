@@ -913,9 +913,9 @@ function LoadKUTA()
         getObjectFromGUID("93d91d").clone({position = {-20.11, 7.00, -13.36}, rotation = {0.0, 240.0, 180.0}}),
         getObjectFromGUID("21af86").clone({position = {20.10, 7.00, 13.43}, rotation = {0.0, 60.0, 180.0}}),
 		
-		getObjectFromGUID("6676ab").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
-        getObjectFromGUID("828dd0").clone({position = {-3.15, 9.15, 9.21}, rotation = {0.0, 270.0, 180.0}}),
-        getObjectFromGUID("345407").clone({position = {7.81, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}}),
+		getObjectFromGUID("78071e").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
+        getObjectFromGUID("5393b7").clone({position = {-3.15, 9.15, 9.21}, rotation = {0.0, 270.0, 180.0}}),
+        getObjectFromGUID("a6464c").clone({position = {7.81, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}}),
         
 		getObjectFromGUID("e053fb").clone({position = {-0.80, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
         getObjectFromGUID("a2893d").clone({position = {-4.62, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
