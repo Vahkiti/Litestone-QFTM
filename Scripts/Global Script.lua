@@ -236,22 +236,22 @@ function LoadQFTM()
         getObjectFromGUID("dd6a94").clone({position = {4.28, 133.00, -2.35}, rotation = {0.0, 300.0, 0.03}, scale = {0.0, 0.0, 0.0}})
     }
 
-	local ToaTokens = {
-		getObjectFromGUID("48695e").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.0, 0.0}}),
-		getObjectFromGUID("989f32").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
-		getObjectFromGUID("1b60da").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
-		getObjectFromGUID("faa7cb").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
-		getObjectFromGUID("f7ee99").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.0, 0.0}}),
-		getObjectFromGUID("52ae02").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
-	}
-	
-	for i=1, #ToaTokens, 1 do
-		ToaTokens[i].addTag("InPlay")
-		ToaTokens[i].removeTag("Dev")
-		ToaTokens[i].tooltip = true
-		ToaTokens[i].locked = true
-	end  
-			
+    local ToaTokens = {
+        getObjectFromGUID("48695e").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.0, 0.0}}),
+        getObjectFromGUID("989f32").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
+        getObjectFromGUID("1b60da").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("faa7cb").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
+        getObjectFromGUID("f7ee99").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.0, 0.0}}),
+        getObjectFromGUID("52ae02").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+    }
+    
+    for i=1, #ToaTokens, 1 do
+        ToaTokens[i].addTag("InPlay")
+        ToaTokens[i].removeTag("Dev")
+        ToaTokens[i].tooltip = true
+        ToaTokens[i].locked = true
+    end  
+            
     --Unlock Canisters & Play Sound
     for i=1, #Canisters, 1 do
         Canisters[i].locked = false      
@@ -278,14 +278,14 @@ function LoadQFTM()
 
             --Add Tags To Cloned Objects
             for i=1, #ToaTokens, 1 do
-				Wait.time(
-					function()
-						ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
-						ToaTokens[i].AssetBundle.playTriggerEffect(0)
-						ToaTokens[i].locked = false
-					end,
-					0.01
-				)
+                Wait.time(
+                    function()
+                        ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
+                        ToaTokens[i].AssetBundle.playTriggerEffect(0)
+                        ToaTokens[i].locked = false
+                    end,
+                    0.01
+                )
             end                            
         end,
         4.4
@@ -400,22 +400,22 @@ function LoadBOSW()
         getObjectFromGUID("dd6a94").clone({position = {-9.88, 133.00, 0.0}, rotation = {0.0, 90.0, 0.0}, scale = {0.0, 0.0, 0.0}}),
         getObjectFromGUID("dd6a94").clone({position = {4.28, 133.00, -2.35}, rotation = {0.0, 300.0, 0.03}, scale = {0.0, 0.0, 0.0}})      
     }
-	
-	local ToaTokens = {
-		getObjectFromGUID("7d6efe").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.00, 0.0}}),
-		getObjectFromGUID("d7272f").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
-		getObjectFromGUID("332ce1").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
-		getObjectFromGUID("2ad542").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
-		getObjectFromGUID("c7bbbe").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.00, 0.0}}),
-		getObjectFromGUID("ef13db").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
-	}
+    
+    local ToaTokens = {
+        getObjectFromGUID("7d6efe").clone({position = {0.74, -5.00, -7.07}, rotation = {0.0, 315.00, 0.0}}),
+        getObjectFromGUID("d7272f").clone({position = {6.64, -5.00, 5.91}, rotation = {0.0, 225.0, 0.0}}),
+        getObjectFromGUID("332ce1").clone({position = {11.36, -5.00, 0.0}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("2ad542").clone({position = {-0.44, -5.00, 7.09}, rotation = {0.0, 180.0, 0.0}}),
+        getObjectFromGUID("c7bbbe").clone({position = {-9.88, -5.00, 0.0}, rotation = {0.0, 90.00, 0.0}}),
+        getObjectFromGUID("ef13db").clone({position = {4.28, -5.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+    }
 
-	for i=1, #ToaTokens, 1 do
-		ToaTokens[i].addTag("InPlay")
-		ToaTokens[i].removeTag("Dev")
-		ToaTokens[i].tooltip = true
-		ToaTokens[i].locked = true
-	end  
+    for i=1, #ToaTokens, 1 do
+        ToaTokens[i].addTag("InPlay")
+        ToaTokens[i].removeTag("Dev")
+        ToaTokens[i].tooltip = true
+        ToaTokens[i].locked = true
+    end  
 
     --Unlock Canisters & Play Sound
     for i=1, #Canisters, 1 do
@@ -446,9 +446,9 @@ function LoadBOSW()
                 if ToaTokens[i] ~= nil then
                     Wait.time(
                         function()  
-							ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
+                            ToaTokens[i]:setPosition(ToaTokens[i].getPosition() + vector (0, 11, 0))
                             ToaTokens[i].AssetBundle.playTriggerEffect(0)
-							ToaTokens[i].locked = false
+                            ToaTokens[i].locked = false
                         end,
                         0.01
                     )
@@ -518,28 +518,6 @@ function LoadRSHL()
         --Manual.setState(3)
     end
 
-    --Add/Replace Meme Cards
-    local Bees = 0.1
-    if math.random() < Bees then
-        local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})
-        BeesActive.removeTag("Dev")
-    end
-    local Trees = 0.1
-    if math.random() < Trees then
-        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TreesActive.removeTag("Dev")
-    end
-    local Bioquake = 0.1
-    if math.random() < Bioquake then
-        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        BioquakeActive.removeTag("Dev")
-    end
-    local TheWorld = 0.1
-    if math.random() < TheWorld then
-        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TheWorldActive.removeTag("Dev")
-    end
-
     --Clone New Objects
     --Object List: TOA, GM, NM, GA, GA EXP, GA EXP 2, MISS, MISS EXP, MISS EXP 2, GMC, RAHI, ART 1&2, 810, HINT
     local Objects = {
@@ -580,6 +558,52 @@ function LoadRSHL()
 
         getObjectFromGUID("ed939b").clone({position = {-25.27, 5.20, 4.37}, rotation = {28.87, 270.00, 0.00}})   
     }
+	
+    --Add/Replace Meme Cards
+    local Bees = 0.1
+    if math.random() < Bees then
+        local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})
+        BeesActive.removeTag("Dev")
+		Wait.time (
+			function()
+				BeesActive.putObject(Objects[26])
+			end,
+			0.1
+		)
+    end
+    local Trees = 0.1
+    if math.random() < Trees then
+        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        TreesActive.removeTag("Dev")
+		Wait.time (
+			function()
+				TreesActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
+    local Bioquake = 0.1
+    if math.random() < Bioquake then
+        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        BioquakeActive.removeTag("Dev")
+		Wait.time (
+			function()
+				BioquakeActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
+    local TheWorld = 0.1
+    if math.random() < TheWorld then
+        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        TheWorldActive.removeTag("Dev")
+		Wait.time (
+			function()
+				TheWorldActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
 
     --Move Studio Tiles
     getObjectFromGUID("46e314").setPosition({-10.36, -2.85, 22.65})
@@ -589,13 +613,13 @@ function LoadRSHL()
     getObjectFromGUID("ff04f2").setRotation({28.83, 329.95, 359.98})
 
     --Spawn Lightshafts & Toa Tokens
-	local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
+    local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
     local Lightshaft2 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 5.91}, rotation = {0.0, 225.0, 0.0}})
-	local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
-	local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
-	local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
-	local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
-	
+    local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
+    local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
+    local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
+    local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+    
     --Tahu
     Wait.time(
         function()  
@@ -871,23 +895,6 @@ function LoadKUTA()
     if Manual.getStateId() ~= 3 then
         --Manual.setState(3)
     end
-    
-    --Add/Replace Meme Cards
-    local Trees = 0.1
-    if math.random() < Trees then
-        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TreesActive.removeTag("Dev")
-    end
-    local Bioquake = 0.1
-    if math.random() < Bioquake then
-        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        BioquakeActive.removeTag("Dev")
-    end
-    local TheWorld = 0.1
-    if math.random() < TheWorld then
-        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TheWorldActive.removeTag("Dev")
-    end
 
     --Clone New Objects
     --Object List: TOA, GM, NM, GA, MISS, GMC, TAKANUVA 1&2, MAKUTA 1&2, SHADOW TOA, ART 1&2, 810, HINT 1&2
@@ -912,17 +919,17 @@ function LoadKUTA()
         getObjectFromGUID("a90c49").clone({position = {-21.59, 7.00, 10.75}, rotation = {0.0, 300.0, 180.0}}),
         getObjectFromGUID("93d91d").clone({position = {-20.11, 7.00, -13.36}, rotation = {0.0, 240.0, 180.0}}),
         getObjectFromGUID("21af86").clone({position = {20.10, 7.00, 13.43}, rotation = {0.0, 60.0, 180.0}}),
-		
-		getObjectFromGUID("78071e").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
+        
+        getObjectFromGUID("78071e").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("5393b7").clone({position = {-3.15, 9.15, 9.21}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("a6464c").clone({position = {7.81, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}}),
         
-		getObjectFromGUID("e053fb").clone({position = {-0.80, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("e053fb").clone({position = {-0.80, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
         getObjectFromGUID("a2893d").clone({position = {-4.62, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
-		getObjectFromGUID("cfd609").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("cfd609").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
         getObjectFromGUID("888a13").clone({position = {-4.62, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
-		
-		getObjectFromGUID("4c1949").clone({position = {-13.22, 9.15, 0.01}, rotation = {0.0, 180.0, 0.0}}),
+        
+        getObjectFromGUID("4c1949").clone({position = {-13.22, 9.15, 0.01}, rotation = {0.0, 180.0, 0.0}}),
 
         getObjectFromGUID("493f7b").clone({position = {13.48, 10.00, 1.83}, rotation = {0.0, 0.0, 180.0}}),
         getObjectFromGUID("d7fc97").clone({position = {13.48, 10.50, 1.83}, rotation = {0.0, 0.0, 180.0}}),
@@ -932,6 +939,41 @@ function LoadKUTA()
         getObjectFromGUID("3e59d0").clone({position = {-25.27, 5.20, 4.37}, rotation = {28.87, 270.00, 0.00}}),
         getObjectFromGUID("d7c8cf").clone({position = {-25.27, 5.20, -4.48}, rotation = {28.87, 270.00, 0.00}})         
     }
+	
+    --Add/Replace Meme Cards
+    local Trees = 0.1
+    if math.random() < Trees then
+        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        TreesActive.removeTag("Dev")
+		Wait.time (
+			function()
+				TreesActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
+    local Bioquake = 0.1
+    if math.random() < Bioquake then
+        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        BioquakeActive.removeTag("Dev")
+		Wait.time (
+			function()
+				BioquakeActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
+    local TheWorld = 0.1
+    if math.random() < TheWorld then
+        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
+        TheWorldActive.removeTag("Dev")
+		Wait.time (
+			function()
+				TheWorldActive.putObject(Objects[19])
+			end,
+			0.1
+		)
+    end
 
     --Move Studio Tiles
     getObjectFromGUID("46e314").setPosition({-10.36, -2.85, 22.65})
@@ -941,13 +983,13 @@ function LoadKUTA()
     getObjectFromGUID("ff04f2").setRotation({28.83, 329.95, 359.98})
 
     --Spawn Lightshafts & Toa Tokens
-	local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
+    local Lightshaft1 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -7.07}, rotation = {0.0, 315.0, 0.0}})
     local Lightshaft2 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 5.91}, rotation = {0.0, 225.0, 0.0}})
-	local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
-	local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
-	local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
-	local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
-	
+    local Lightshaft3 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 270.0, 0.0}})
+    local Lightshaft4 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 7.09}, rotation = {0.0, 180.0, 0.0}})
+    local Lightshaft5 = getObjectFromGUID("911407").clone({position = {1000, 0.00, 0.0}, rotation = {0.0, 90.0, 0.0}})
+    local Lightshaft6 = getObjectFromGUID("911407").clone({position = {1000, 0.00, -2.35}, rotation = {0.0, 300.0, 0.03}})
+    
     --Tahu
     Wait.time(
         function()  
@@ -1165,14 +1207,14 @@ function LoadKUTA()
     )
 
     --Spawn Takanuva & Makuta
-	local Makuta = getObjectFromGUID("7feda9").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
-	Makuta.removeTag("Dev")
-	Makuta.tooltip = true
-	Makuta.locked = true
-	local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
-	TakaPortal.locked = true
-	local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
-	MakutaPortal.locked = true
+    local Makuta = getObjectFromGUID("7feda9").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
+    Makuta.removeTag("Dev")
+    Makuta.tooltip = true
+    Makuta.locked = true
+    local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
+    TakaPortal.locked = true
+    local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
+    MakutaPortal.locked = true
     local MakutaTablePortal = getObjectFromGUID("207f49").clone({position = {-1000.00, -30.00, 0.00}, rotation = {0.0, 0.0, 0.0}, scale = {10.0, 15.0, 23.0}})
     MakutaTablePortal.locked = true
     Wait.time(
@@ -1235,25 +1277,6 @@ function LoadKUTA()
             MakutaTablePortal.removeTag("Dev")
             Wait.time(
                 function()
-                    local Rockshi = 0.1
-                    if math.random() < Rockshi then
-                        local RockshiActive = getObjectFromGUID("016e83").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})    
-                        RockshiActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                        RockshiActive.removeTag("Dev")
-                    end
-                    local Kayahk = 0.1
-                    if math.random() < Kayahk then
-                        local KayahkActive = getObjectFromGUID("2b8812").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        KayahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                        KayahkActive.removeTag("Dev")
-                    end
-                    local YeOlrahk = 0.1
-                    if math.random() < YeOlrahk then
-                        local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        YeOlrahkActive:setPositionSmooth({-39.28, 6.00, -5.41})
-                        YeOlrahkActive.removeTag("Dev")
-                    end
-            
                     local Cards = {
                         getObjectFromGUID("ce790f").clone({position = {-39.28, -8.00, 8.31}, rotation = {0.0, 270.0, 180.0}}),
                         getObjectFromGUID("b189ab").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}}),
@@ -1268,7 +1291,44 @@ function LoadKUTA()
                     local Token1 = Cards[3]
                     local Token2 = Cards[4]
                     local Token3 = Cards[5]
-                    local Token4 = Cards[6]
+                    local Token4 = Cards[6]				
+                    local Rockshi = 0.1
+                    if math.random() < Rockshi then
+                        local RockshiActive = getObjectFromGUID("016e83").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})    
+                        RockshiActive.removeTag("Dev")
+                        RockshiActive.putObject(Rahkshi)
+                    end
+                    local Kayahk = 0.1
+                    if math.random() < Kayahk then
+                        local KayahkActive = getObjectFromGUID("2b8812").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        KayahkActive.removeTag("Dev")
+                        KayahkActive.putObject(Rahkshi)
+                    end
+                    local YeOlrahk = 0.1
+                    if math.random() < YeOlrahk then
+                        local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        YeOlrahkActive.removeTag("Dev")
+						YeOlrahkActive.putObject(Rahkshi)
+                    end                  
+                    local Sonahk = 0.1
+                    if math.random() < Sonahk then
+                        local SonahkActive = getObjectFromGUID("6ef821").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        SonahkActive.removeTag("Dev")
+						SonahkActive.putObject(Rahkshi)
+                    end                    
+                    local EveryBagel = 0.1
+                    if math.random() < EveryBagel then
+                        local EveryBagelActive = getObjectFromGUID("910fcd").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
+                        EveryBagelActive.removeTag("Dev")
+                        EveryBagelActive.putObject(Rahkshi)
+                    end
+                    local Baguette = 0.1
+                    if math.random() < Baguette then
+                        local BaguetteActive = getObjectFromGUID("1c05a3").clone({position = {-39.28, -8.00, 8.31}, rotation = {0.0, 270.0, 180.0}})
+                        BaguetteActive.removeTag("Dev")
+                        BaguetteActive.putObject(Kraata)
+                    end
+            
                     Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
                     Rahkshi:setPositionSmooth({-39.28, 6.00, -5.41})
                     Token1:setPositionSmooth({-34.54, 6.00, 2.60})
@@ -1350,7 +1410,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Green" then
         Wait.time(function()
@@ -1361,7 +1421,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Red" then
         Wait.time(function()
@@ -1372,7 +1432,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Brown" then
         Wait.time(function()
@@ -1383,7 +1443,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Blue" then
         Wait.time(function()
@@ -1394,7 +1454,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Purple" then
         Wait.time(function()
@@ -1405,7 +1465,7 @@ function onPlayerChangeColor(color)
                 distance = 50
             })
         end, 
-		0.8)
+        0.8)
     end
     if color == "Orange" then
         Wait.time(function()
@@ -1416,6 +1476,6 @@ function onPlayerChangeColor(color)
                 distance = 59
             })
         end, 
-		0.8)
+        0.8)
     end
 end
