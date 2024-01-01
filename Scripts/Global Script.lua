@@ -558,10 +558,10 @@ function LoadRSHL()
     --Add/Replace Meme Cards
     local Bees = 0.1
     if math.random() < Bees then
-        local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})
-        BeesActive.removeTag("Dev")
+        local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})   
         Wait.time (
             function()
+				BeesActive.removeTag("Dev")
                 BeesActive.putObject(Objects[26])
             end,
             0.1
@@ -569,10 +569,10 @@ function LoadRSHL()
     end
     local Trees = 0.1
     if math.random() < Trees then
-        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TreesActive.removeTag("Dev")
+        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})     
         Wait.time (
             function()
+				TreesActive.removeTag("Dev")
                 TreesActive.putObject(Objects[19])
             end,
             0.1
@@ -580,10 +580,10 @@ function LoadRSHL()
     end
     local Bioquake = 0.1
     if math.random() < Bioquake then
-        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        BioquakeActive.removeTag("Dev")
+        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}) 
         Wait.time (
             function()
+				BioquakeActive.removeTag("Dev")
                 BioquakeActive.putObject(Objects[19])
             end,
             0.1
@@ -592,9 +592,9 @@ function LoadRSHL()
     local TheWorld = 0.1
     if math.random() < TheWorld then
         local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TheWorldActive.removeTag("Dev")
         Wait.time (
             function()
+				TheWorldActive.removeTag("Dev")
                 TheWorldActive.putObject(Objects[19])
             end,
             0.1
