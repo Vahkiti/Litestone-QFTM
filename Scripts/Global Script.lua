@@ -246,7 +246,6 @@ function LoadQFTM()
     }
     
     for i=1, #ToaTokens, 1 do
-        ToaTokens[i].addTag("InPlay")
         ToaTokens[i].removeTag("Dev")
         ToaTokens[i].tooltip = true
         ToaTokens[i].locked = true
@@ -295,10 +294,9 @@ function LoadQFTM()
     UI.hide("GameModeSwitch")
     getObjectFromGUID("3bb2af").setState(2)
 
-    --Add Tags, Tooltip, & Shuffle
+    --Adjust Tags, Tooltip, & Shuffle
     for i=1, #Objects, 1 do
         if Objects[i] ~= nil then
-            Objects[i].addTag("InPlay")
             Objects[i].removeTag("Dev")
             Objects[i].tooltip = true
             if Objects[i].hasTag("Shuffle") then
@@ -411,7 +409,6 @@ function LoadBOSW()
     }
 
     for i=1, #ToaTokens, 1 do
-        ToaTokens[i].addTag("InPlay")
         ToaTokens[i].removeTag("Dev")
         ToaTokens[i].tooltip = true
         ToaTokens[i].locked = true
@@ -482,10 +479,9 @@ function LoadBOSW()
     UI.hide("GameModeSwitch")
     getObjectFromGUID("3bb2af").setState(2)
 
-    --Add Tags, Tooltip, & Shuffle
+    --Adjust Tags, Tooltip, & Shuffle
     for i=1, #Objects, 1 do
         if Objects[i] ~= nil then
-            Objects[i].addTag("InPlay")
             Objects[i].removeTag("Dev")
             Objects[i].tooltip = true
             if Objects[i].hasTag("Shuffle") then
@@ -558,51 +554,51 @@ function LoadRSHL()
 
         getObjectFromGUID("ed939b").clone({position = {-25.27, 5.20, 4.37}, rotation = {28.87, 270.00, 0.00}})   
     }
-	
+    
     --Add/Replace Meme Cards
     local Bees = 0.1
     if math.random() < Bees then
         local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})
         BeesActive.removeTag("Dev")
-		Wait.time (
-			function()
-				BeesActive.putObject(Objects[26])
-			end,
-			0.1
-		)
+        Wait.time (
+            function()
+                BeesActive.putObject(Objects[26])
+            end,
+            0.1
+        )
     end
     local Trees = 0.1
     if math.random() < Trees then
         local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
         TreesActive.removeTag("Dev")
-		Wait.time (
-			function()
-				TreesActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        Wait.time (
+            function()
+                TreesActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
     local Bioquake = 0.1
     if math.random() < Bioquake then
         local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
         BioquakeActive.removeTag("Dev")
-		Wait.time (
-			function()
-				BioquakeActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        Wait.time (
+            function()
+                BioquakeActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
     local TheWorld = 0.1
     if math.random() < TheWorld then
         local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
         TheWorldActive.removeTag("Dev")
-		Wait.time (
-			function()
-				TheWorldActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        Wait.time (
+            function()
+                TheWorldActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
 
     --Move Studio Tiles
@@ -860,10 +856,9 @@ function LoadRSHL()
     UI.hide("GameModeSwitch")
     getObjectFromGUID("3bb2af").setState(2)
 
-    --Add Tags, Tooltip, & Shuffle
+    --Adjust Tags, Tooltip, & Shuffle
     for i=1, #Objects, 1 do
         if Objects[i] ~= nil then
-            Objects[i].addTag("InPlay")
             Objects[i].removeTag("Dev")
             Objects[i].tooltip = true
             if Objects[i].hasTag("Shuffle") then
@@ -939,40 +934,40 @@ function LoadKUTA()
         getObjectFromGUID("3e59d0").clone({position = {-25.27, 5.20, 4.37}, rotation = {28.87, 270.00, 0.00}}),
         getObjectFromGUID("d7c8cf").clone({position = {-25.27, 5.20, -4.48}, rotation = {28.87, 270.00, 0.00}})         
     }
-	
+    
     --Add/Replace Meme Cards
     local Trees = 0.1
     if math.random() < Trees then
-        local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TreesActive.removeTag("Dev")
-		Wait.time (
-			function()
-				TreesActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        local TreesActive = getObjectFromGUID("b36d54").clone({position = {1.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+        Wait.time (
+            function()
+                TreesActive.removeTag("Dev")
+                TreesActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
     local Bioquake = 0.1
     if math.random() < Bioquake then
-        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        BioquakeActive.removeTag("Dev")
-		Wait.time (
-			function()
-				BioquakeActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {2.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
+        Wait.time (
+            function()
+                BioquakeActive.removeTag("Dev")
+                BioquakeActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
     local TheWorld = 0.1
     if math.random() < TheWorld then
-        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, -8.00, 9.17}, rotation = {0.0, 270.0, 180.0}})
-        TheWorldActive.removeTag("Dev")
-		Wait.time (
-			function()
-				TheWorldActive.putObject(Objects[19])
-			end,
-			0.1
-		)
+        local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {3.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
+        Wait.time (
+            function()
+                TheWorldActive.removeTag("Dev")
+                TheWorldActive.putObject(Objects[19])
+            end,
+            0.1
+        )
     end
 
     --Move Studio Tiles
@@ -1211,6 +1206,10 @@ function LoadKUTA()
     Makuta.removeTag("Dev")
     Makuta.tooltip = true
     Makuta.locked = true
+    local Takanuva = getObjectFromGUID("2b06ad").clone({position = {-0.80, 5.00, -9.13}, rotation = {0.0, 0.0, 0.0}})
+    Takanuva.removeTag("Dev")    
+    Takanuva.tooltip = true
+    Takanuva.locked = true
     local TakaPortal = getObjectFromGUID("acdc27").clone({position = {-1000, 5.00, -9.13}, rotation = {0.0, -90.0, 0.0}})
     TakaPortal.locked = true
     local MakutaPortal = getObjectFromGUID("207f49").clone({position = {-1000, 5.00, 0.00}, rotation = {0.0, 0.0, 0.0}})
@@ -1219,10 +1218,6 @@ function LoadKUTA()
     MakutaTablePortal.locked = true
     Wait.time(
         function()
-            local Takanuva = getObjectFromGUID("2b06ad").clone({position = {-0.80, 5.00, -9.13}, rotation = {0.0, 0.0, 0.0}})
-            Takanuva.removeTag("Dev")    
-            Takanuva.tooltip = true
-            Takanuva.locked = true
             Wait.time(
                 function() 
                     TakaPortal.AssetBundle.playTriggerEffect(0)
@@ -1291,42 +1286,72 @@ function LoadKUTA()
                     local Token1 = Cards[3]
                     local Token2 = Cards[4]
                     local Token3 = Cards[5]
-                    local Token4 = Cards[6]				
+                    local Token4 = Cards[6]                
                     local Rockshi = 0.1
                     if math.random() < Rockshi then
-                        local RockshiActive = getObjectFromGUID("016e83").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})    
-                        RockshiActive.removeTag("Dev")
-                        RockshiActive.putObject(Rahkshi)
+                        local RockshiActive = getObjectFromGUID("016e83").clone({position = {4.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
+                        Wait.time (
+                            function()
+                                RockshiActive.removeTag("Dev")
+                                RockshiActive.putObject(Rahkshi)
+                            end,
+                            0.1
+                        )
                     end
                     local Kayahk = 0.1
                     if math.random() < Kayahk then
-                        local KayahkActive = getObjectFromGUID("2b8812").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        KayahkActive.removeTag("Dev")
-                        KayahkActive.putObject(Rahkshi)
+                        local KayahkActive = getObjectFromGUID("2b8812").clone({position = {5.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+                        Wait.time (
+                            function()
+                                KayahkActive.removeTag("Dev")
+                                KayahkActive.putObject(Rahkshi)
+                            end,
+                            0.1
+                        )
                     end
                     local YeOlrahk = 0.1
                     if math.random() < YeOlrahk then
-                        local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        YeOlrahkActive.removeTag("Dev")
-						YeOlrahkActive.putObject(Rahkshi)
+                        local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {6.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+                        Wait.time (
+                            function()
+                                YeOlrahkActive.removeTag("Dev")
+                                YeOlrahkActive.putObject(Rahkshi)
+                            end,
+                            0.1
+                        )
                     end                  
                     local Sonahk = 0.1
                     if math.random() < Sonahk then
-                        local SonahkActive = getObjectFromGUID("6ef821").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        SonahkActive.removeTag("Dev")
-						SonahkActive.putObject(Rahkshi)
+                        local SonahkActive = getObjectFromGUID("6ef821").clone({position = {7.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+                        Wait.time (
+                            function()
+                                SonahkActive.removeTag("Dev")
+                                SonahkActive.putObject(Rahkshi)
+                            end,
+                            0.1
+                        )
                     end                    
                     local EveryBagel = 0.1
                     if math.random() < EveryBagel then
-                        local EveryBagelActive = getObjectFromGUID("910fcd").clone({position = {-39.28, -8.00, -5.41}, rotation = {0.0, 270.0, 180.0}})
-                        EveryBagelActive.removeTag("Dev")
-                        EveryBagelActive.putObject(Rahkshi)
+                        local EveryBagelActive = getObjectFromGUID("910fcd").clone({position = {8.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+                        Wait.time (
+                            function()
+                                EveryBagelActive.removeTag("Dev")
+                                EveryBagelActive.putObject(Rahkshi)
+                            end,
+                            0.1
+                        )
                     end
                     local Baguette = 0.1
                     if math.random() < Baguette then
-                        local BaguetteActive = getObjectFromGUID("1c05a3").clone({position = {-39.28, -8.00, 8.31}, rotation = {0.0, 270.0, 180.0}})
-                        BaguetteActive.removeTag("Dev")
-                        BaguetteActive.putObject(Kraata)
+                        local BaguetteActive = getObjectFromGUID("1c05a3").clone({position = {9.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
+                        Wait.time (
+                            function()
+                                BaguetteActive.removeTag("Dev")
+                                BaguetteActive.putObject(Kraata)
+                            end,
+                            0.1
+                        )
                     end
             
                     Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
@@ -1352,10 +1377,9 @@ function LoadKUTA()
                     MakutaBag.tooltip = true                                        
                     local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
                     
-                    --Add Tags, Tooltip & Shuffle
+                    --Adjust Tags, Tooltip & Shuffle
                     for i=1, #Cards, 1 do
                         if Cards[i] ~= nil then
-                            Cards[i].addTag("InPlay")
                             Cards[i].removeTag("Dev")
                             Cards[i].tooltip = true
                             if Cards[i].hasTag("Shuffle") then
@@ -1375,10 +1399,9 @@ function LoadKUTA()
         4.00
     )
 
-    --Add Tags, Tooltip, & Shuffle
+    --Adjust Tags, Tooltip, & Shuffle
     for i=1, #Objects, 1 do
         if Objects[i] ~= nil then
-            Objects[i].addTag("InPlay")
             Objects[i].removeTag("Dev")
             Objects[i].tooltip = true
             if Objects[i].hasTag("Shuffle") then
