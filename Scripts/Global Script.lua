@@ -7,8 +7,8 @@ ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '
 '711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153', '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
 
 --Force Tag Exclusion
---Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-3, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
-TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '70b6a8', '845f3b', 'MAN3-PLACEHOLDER', 'c9f45c', '0bf751', '3bb2af',
+--Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-4, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
+TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '70b6a8', '845f3b', '50c571', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af',
 '6963c5', '4a83e9', '7ffc4c', 'd9b152', '256153'}
 
 function onLoad()
@@ -72,8 +72,10 @@ function Cleanup()
         Manual = getObjectFromGUID("70b6a8")
     elseif getObjectFromGUID("845f3b") ~= nil then
         Manual = getObjectFromGUID("845f3b")        
-    elseif getObjectFromGUID("845f3b") ~= nil then
-        --Manual = getObjectFromGUID("MAN3-PLACEHOLDER")  
+    elseif getObjectFromGUID("50c571") ~= nil then
+        Manual = getObjectFromGUID("50c571")      
+    elseif getObjectFromGUID("b9e0f7") ~= nil then
+        Manual = getObjectFromGUID("b9e0f7")  
     end
 
     --Create Var For Tablet
@@ -511,7 +513,7 @@ function LoadRSHL()
         Tablet.setState(3)
     end
     if Manual.getStateId() ~= 3 then
-        --Manual.setState(3)
+        Manual.setState(3)
     end
 
     --Clone New Objects
@@ -561,7 +563,7 @@ function LoadRSHL()
         local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})   
         Wait.time (
             function()
-				BeesActive.removeTag("Dev")
+                BeesActive.removeTag("Dev")
                 BeesActive.putObject(Objects[26])
             end,
             0.1
@@ -572,7 +574,7 @@ function LoadRSHL()
         local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})     
         Wait.time (
             function()
-				TreesActive.removeTag("Dev")
+                TreesActive.removeTag("Dev")
                 TreesActive.putObject(Objects[19])
             end,
             0.1
@@ -583,7 +585,7 @@ function LoadRSHL()
         local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}) 
         Wait.time (
             function()
-				BioquakeActive.removeTag("Dev")
+                BioquakeActive.removeTag("Dev")
                 BioquakeActive.putObject(Objects[19])
             end,
             0.1
@@ -594,7 +596,7 @@ function LoadRSHL()
         local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
         Wait.time (
             function()
-				TheWorldActive.removeTag("Dev")
+                TheWorldActive.removeTag("Dev")
                 TheWorldActive.putObject(Objects[19])
             end,
             0.1
@@ -887,8 +889,8 @@ function LoadKUTA()
     if Tablet.getStateId() ~= 3 then
         Tablet.setState(3)
     end
-    if Manual.getStateId() ~= 3 then
-        --Manual.setState(3)
+    if Manual.getStateId() ~= 4 then
+        Manual.setState(4)
     end
 
     --Clone New Objects
