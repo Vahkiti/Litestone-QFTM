@@ -894,7 +894,7 @@ function LoadKUTA()
     end
 
     --Clone New Objects
-    --Object List: TOA, GM, NM, GA, MISS, GMC, TAKANUVA 1&2, MAKUTA 1&2, SHADOW TOA, ART 1&2, 810, HINT 1&2
+    --Object List: TOA, GM, NM, GA, MISS, GMC, TAKANUVA 1&2, MAKUTA 1, SHADOW TOA, ART 1&2, 810, HINT 1&2
     local Objects = {
         getObjectFromGUID("6949b1").clone({position = {0.12, 9.15, -14.57}, rotation = {0.0, 180.0, 0.0}}),
         getObjectFromGUID("1405e0").clone({position = {-0.19, 9.15, 14.59}, rotation = {0.0, 0.0, 0.0}}),
@@ -923,8 +923,7 @@ function LoadKUTA()
         
         getObjectFromGUID("e053fb").clone({position = {-0.80, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
         getObjectFromGUID("a2893d").clone({position = {-4.62, 9.17, -9.13}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("cfd609").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("888a13").clone({position = {-4.62, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("cfd609").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 0.0}}),      
         
         getObjectFromGUID("4c1949").clone({position = {-13.22, 9.15, 0.01}, rotation = {0.0, 180.0, 0.0}}),
 
@@ -1281,6 +1280,7 @@ function LoadKUTA()
                         getObjectFromGUID("cd994b").clone({position = {-34.54, -8.00, 0.86}, rotation = {0.0, 270.0, 0.0}}),
                         getObjectFromGUID("a77e27").clone({position = {-34.54, -8.00, -0.87}, rotation = {0.0, 270.0, 0.0}}),
                         getObjectFromGUID("9e0c24").clone({position = {-34.54, -8.00, -2.62}, rotation = {0.0, 270.0, 0.0}}),
+                        getObjectFromGUID("888a13").clone({position = {-38.70, -8.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
                     }
 
                     local Kraata = Cards[1]
@@ -1288,7 +1288,8 @@ function LoadKUTA()
                     local Token1 = Cards[3]
                     local Token2 = Cards[4]
                     local Token3 = Cards[5]
-                    local Token4 = Cards[6]                
+                    local Token4 = Cards[6]      
+                    local Kraahkan = Cards[7]
                     local Rockshi = 0.1
                     if math.random() < Rockshi then
                         local RockshiActive = getObjectFromGUID("016e83").clone({position = {4.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
@@ -1358,6 +1359,7 @@ function LoadKUTA()
             
                     Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
                     Rahkshi:setPositionSmooth({-39.28, 6.00, -5.41})
+                    Kraahkan:setPositionSmooth({-38.70, 6.00, 0.00})
                     Token1:setPositionSmooth({-34.54, 6.00, 2.60})
                     Token1.removeTag("Dev")
                     Token2:setPositionSmooth({-34.54, 6.00, 0.86})
