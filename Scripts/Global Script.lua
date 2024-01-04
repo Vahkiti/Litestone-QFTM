@@ -1204,7 +1204,7 @@ function LoadKUTA()
     )
 
     --Spawn Takanuva & Makuta
-    local Makuta = getObjectFromGUID("7feda9").clone({position = {-5.16, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
+    local Makuta = getObjectFromGUID("7feda9").clone({position = {-0.44, 5.00, 0.00}, rotation = {0.0, 270.0, 0.0}})
     Makuta.removeTag("Dev")
     Makuta.tooltip = true
     Makuta.locked = true
@@ -1225,20 +1225,20 @@ function LoadKUTA()
                     TakaPortal.AssetBundle.playTriggerEffect(0)
                     TakaPortal.setPosition({-0.80, 1.00, -9.13})
                     MakutaPortal.AssetBundle.playTriggerEffect(0)
-                    MakutaPortal.setPosition({-5.16, 0.90, 0.00})
+                    MakutaPortal.setPosition({-0.44, 0.90, 0.00})
                 end,
                 0.5
             )
             Wait.time(
                 function()
                     Takanuva.setPositionSmooth({-0.80, 0.90, -9.13})
-                    Makuta.setPositionSmooth({-5.16, 0.85, 0.00})
+                    Makuta.setPositionSmooth({-0.44, 0.85, 0.00})
                     Wait.time(
                         function()
                             Takanuva.locked = false
-                            TakaPortal.setPosition({-1000, 5.00, -9.13})                            
+                            TakaPortal.destruct()                          
                             Makuta.locked = false
-                            MakutaPortal.setPosition({-1000, 5.00, 0.00})
+                            MakutaPortal.destruct()
                         end,
                         4.00
                     )
@@ -1267,7 +1267,7 @@ function LoadKUTA()
             )
             Wait.time(
                 function()                     
-                    MakutaTablePortal.setPosition({-1000.00, -30.00, 0.00})
+                    MakutaTablePortal.destruct()
                 end,
                 4.00
             )
@@ -1359,9 +1359,13 @@ function LoadKUTA()
                     Kraata:setPositionSmooth({-39.28, 6.00, 8.31})
                     Rahkshi:setPositionSmooth({-39.28, 6.00, -5.41})
                     Token1:setPositionSmooth({-34.54, 6.00, 2.60})
+					Token1.removeTag("Dev")
                     Token2:setPositionSmooth({-34.54, 6.00, 0.86})
+					Token2.removeTag("Dev")
                     Token3:setPositionSmooth({-34.54, 6.00, -0.87})
+					Token3.removeTag("Dev")
                     Token4:setPositionSmooth({-34.54, 6.00, -2.62})
+					Token4.removeTag("Dev")
                     getObjectFromGUID("c5b23e"):setPositionSmooth({-43.97, 4.00, 0.0})
                     getObjectFromGUID("256153").setState(1)
                     getObjectFromGUID("7ffc4c"):setPositionSmooth({20.12, -0.60, 0.0})     
