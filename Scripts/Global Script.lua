@@ -1380,7 +1380,6 @@ function LoadKUTA()
                     MakutaDie.tooltip = true
                     local MakutaBag = getObjectFromGUID("916518")
                     MakutaBag:setPositionSmooth({-36.43, 5.00, -3.00})    
-                    MakutaBag.locked = false
                     MakutaBag.interactable = true
                     MakutaBag.tooltip = true                                        
                     local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
