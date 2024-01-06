@@ -558,7 +558,7 @@ function LoadRSHL()
     }
     
     --Add/Replace Meme Cards
-    local Bees = 0.1
+    local Bees = 0.01
     if math.random() < Bees then
         local BeesActive = getObjectFromGUID("6a5635").clone({position = {-0.80, 9.15, -9.13}, rotation = {0.0, 270.0, 180.0}})   
         Wait.time (
@@ -569,7 +569,7 @@ function LoadRSHL()
             0.1
         )
     end
-    local Trees = 0.1
+    local Trees = 0.01
     if math.random() < Trees then
         local TreesActive = getObjectFromGUID("b36d54").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})     
         Wait.time (
@@ -580,7 +580,7 @@ function LoadRSHL()
             0.1
         )
     end
-    local Bioquake = 0.1
+    local Bioquake = 0.01
     if math.random() < Bioquake then
         local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}) 
         Wait.time (
@@ -591,7 +591,7 @@ function LoadRSHL()
             0.1
         )
     end
-    local TheWorld = 0.1
+    local TheWorld = 0.01
     if math.random() < TheWorld then
         local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}})
         Wait.time (
@@ -937,7 +937,7 @@ function LoadKUTA()
     }
     
     --Add/Replace Meme Cards
-    local Trees = 0.1
+    local Trees = 0.01
     if math.random() < Trees then
         local TreesActive = getObjectFromGUID("b36d54").clone({position = {1.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
         Wait.time (
@@ -948,7 +948,7 @@ function LoadKUTA()
             0.1
         )
     end
-    local Bioquake = 0.1
+    local Bioquake = 0.01
     if math.random() < Bioquake then
         local BioquakeActive = getObjectFromGUID("ab07b8").clone({position = {2.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
         Wait.time (
@@ -959,7 +959,7 @@ function LoadKUTA()
             0.1
         )
     end
-    local TheWorld = 0.1
+    local TheWorld = 0.01
     if math.random() < TheWorld then
         local TheWorldActive = getObjectFromGUID("25ea03").clone({position = {3.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
         Wait.time (
@@ -1290,7 +1290,7 @@ function LoadKUTA()
                     local Token3 = Cards[5]
                     local Token4 = Cards[6]      
                     local Kraahkan = Cards[7]
-                    local Rockshi = 0.1
+                    local Rockshi = 0.01
                     if math.random() < Rockshi then
                         local RockshiActive = getObjectFromGUID("016e83").clone({position = {4.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})    
                         Wait.time (
@@ -1301,7 +1301,7 @@ function LoadKUTA()
                             0.1
                         )
                     end
-                    local Kayahk = 0.1
+                    local Kayahk = 0.01
                     if math.random() < Kayahk then
                         local KayahkActive = getObjectFromGUID("2b8812").clone({position = {5.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
                         Wait.time (
@@ -1312,7 +1312,7 @@ function LoadKUTA()
                             0.1
                         )
                     end
-                    local YeOlrahk = 0.1
+                    local YeOlrahk = 0.01
                     if math.random() < YeOlrahk then
                         local YeOlrahkActive = getObjectFromGUID("6bbcf5").clone({position = {6.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
                         Wait.time (
@@ -1323,7 +1323,7 @@ function LoadKUTA()
                             0.1
                         )
                     end                  
-                    local Sonahk = 0.1
+                    local Sonahk = 0.01
                     if math.random() < Sonahk then
                         local SonahkActive = getObjectFromGUID("6ef821").clone({position = {7.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
                         Wait.time (
@@ -1334,7 +1334,7 @@ function LoadKUTA()
                             0.1
                         )
                     end                    
-                    local EveryBagel = 0.1
+                    local EveryBagel = 0.01
                     if math.random() < EveryBagel then
                         local EveryBagelActive = getObjectFromGUID("910fcd").clone({position = {8.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
                         Wait.time (
@@ -1345,7 +1345,7 @@ function LoadKUTA()
                             0.1
                         )
                     end
-                    local Baguette = 0.1
+                    local Baguette = 0.01
                     if math.random() < Baguette then
                         local BaguetteActive = getObjectFromGUID("1c05a3").clone({position = {9.00, 0.00, 0.00}, rotation = {0.0, 270.0, 180.0}})
                         Wait.time (
