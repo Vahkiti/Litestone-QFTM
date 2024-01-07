@@ -38,6 +38,10 @@ function ObjectFreeze()
             obj.tooltip = false
         end
     end
+    local MakutaDie = getObjectFromGUID("26a094")
+    local MakutaBag = getObjectFromGUID("916518")
+    MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
+    MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})    
 end
 
 function SetStorage()
@@ -176,11 +180,13 @@ function Cleanup()
     MakutaDie.locked = true
     MakutaDie.interactable = false
     MakutaDie.tooltip = false
+    MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange', 'Grey', 'Black'})
     local MakutaBag = getObjectFromGUID("916518")
     MakutaBag:setPosition({-36.42, -17.0, -3.00})
     MakutaBag.locked = true
     MakutaBag.interactable = false
     MakutaBag.tooltip = false
+    MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange', 'Grey', 'Black'})
     if getObjectFromGUID("7ffc4c") ~= nil then
         getObjectFromGUID("7ffc4c").setState(2)
     end
@@ -247,33 +253,33 @@ function LoadQFTM()
         getObjectFromGUID("919ea8").clone({position = {-12.57, 9.15, -7.42}, rotation = {0.0, 240.0, 0.0}}),
         getObjectFromGUID("77217f").clone({position = {12.50, 9.15, 7.62}, rotation = {0.0, 60.0, 0.0}}),     
 
-        getObjectFromGUID("ce94ee").clone({position = {-2.31, 7.50, -23.99}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("508ca7").clone({position = {2.40, 7.50, 24.01}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("2d220a").clone({position = {19.64, 7.50, -14.11}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("d6b241").clone({position = {-19.57, 7.50, 14.20}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("fd3cb1").clone({position = {-22.05, 7.50, -9.91}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("951ed5").clone({position = {22.02, 7.50, 9.94}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("ce94ee").clone({position = {-2.49, 7.50, -24.18}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("508ca7").clone({position = {2.47, 7.50, 24.18}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("2d220a").clone({position = {19.76, 7.50, -14.20}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("d6b241").clone({position = {-19.82, 7.50, 14.20}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("fd3cb1").clone({position = {-22.19, 7.50, -9.98}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("951ed5").clone({position = {22.19, 7.50, 9.93}, rotation = {0.0, 60.0, 180.0}}),
 
-        getObjectFromGUID("691828").clone({position = {-29.93, 7.00, 7.12}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("6a5a4a").clone({position = {-29.93, 7.00, -1.36}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("371688").clone({position = {-29.93, 7.00, -6.78}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("9f1800").clone({position = {-29.93, 7.00, 1.57}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("73601d").clone({position = {-29.93, 7.00, 4.30}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("445888").clone({position = {-29.93, 7.00, -4.19}, rotation = {0.0, 270.0, 0.0}}),      
+        getObjectFromGUID("469e8c").clone({position = {-29.93, 7.00, 7.12}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("5174d6").clone({position = {-29.93, 7.00, -1.36}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("7f8f19").clone({position = {-29.93, 7.00, -6.78}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("a848e6").clone({position = {-29.93, 7.00, 1.57}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("6b6f8f").clone({position = {-29.93, 7.00, 4.30}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("d57e4a").clone({position = {-29.93, 7.00, -4.19}, rotation = {0.0, 270.0, 0.0}}),      
  
-        getObjectFromGUID("aafafb").clone({position = {0.05, 7.50, -24.01}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("ad92d0").clone({position = {-0.03, 7.50, 24.04}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("297127").clone({position = {20.93, 7.50, -12.08}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("56b918").clone({position = {-20.83, 7.50, 12.02}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("d8ae44").clone({position = {-20.80, 7.50, -12.07}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("f2e171").clone({position = {20.82, 7.50, 12.04}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("aafafb").clone({position = {0.00, 7.50, -24.18}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("ad92d0").clone({position = {0.00, 7.50, 24.18}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("297127").clone({position = {20.99, 7.50, -12.06}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("56b918").clone({position = {-21.06, 7.50, 12.06}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("d8ae44").clone({position = {-20.96, 7.50, -12.13}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("f2e171").clone({position = {20.96, 7.50, 12.06}, rotation = {0.0, 60.0, 180.0}}),
 
-        getObjectFromGUID("182329").clone({position = {2.42, 7.50, -24.01}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("2ce947").clone({position = {-2.44, 7.50, 24.11}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("e35afb").clone({position = {22.10, 7.50, -10.00}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("b26051").clone({position = {-22.16, 7.50, 9.87}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("66a31f").clone({position = {-19.58, 7.50, -14.18}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("c0d920").clone({position = {19.67, 7.50, 14.14}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("182329").clone({position = {2.46, 7.50, -24.21}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("2ce947").clone({position = {-2.46, 7.50, 24.21}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("e35afb").clone({position = {22.23, 7.50, -9.90}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("b26051").clone({position = {-22.33, 7.50, 9.90}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("66a31f").clone({position = {-19.73, 7.50, -14.26}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("c0d920").clone({position = {19.73, 7.50, 14.21}, rotation = {0.0, 60.0, 180.0}}),
 
         getObjectFromGUID("e11d44").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("7af61e").clone({position = {1.62, 9.15, 9.17}, rotation = {0.0, 270.0, 0.0}}),
@@ -426,33 +432,33 @@ function LoadBOSW()
         getObjectFromGUID("ad325c").clone({position = {-12.57, 9.15, -7.42}, rotation = {0.0, 240.0, 0.0}}),
         getObjectFromGUID("905cb5").clone({position = {12.50, 9.15, 7.62}, rotation = {0.0, 60.0, 0.0}}),
 
-        getObjectFromGUID("b88da8").clone({position = {-2.31, 7.50, -23.99}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("bc0973").clone({position = {2.40, 7.50, 24.01}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("e1376a").clone({position = {19.64, 7.50, -14.11}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("66b985").clone({position = {-19.57, 7.50, 14.20}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("6380ee").clone({position = {-22.05, 7.50, -9.91}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("e08fb4").clone({position = {22.02, 7.50, 9.94}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("b88da8").clone({position = {-2.49, 7.50, -24.18}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("bc0973").clone({position = {2.47, 7.50, 24.18}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("e1376a").clone({position = {19.76, 7.50, -14.20}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("66b985").clone({position = {-19.82, 7.50, 14.20}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("6380ee").clone({position = {-22.19, 7.50, -9.98}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("e08fb4").clone({position = {22.19, 7.50, 9.93}, rotation = {0.0, 60.0, 180.0}}),
 
-        getObjectFromGUID("691828").clone({position = {-29.93, 7.00, 7.12}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("6a5a4a").clone({position = {-29.93, 7.00, -1.36}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("371688").clone({position = {-29.93, 7.00, -6.78}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("9f1800").clone({position = {-29.93, 7.00, 1.57}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("73601d").clone({position = {-29.93, 7.00, 4.30}, rotation = {0.0, 270.0, 0.0}}),
-        getObjectFromGUID("445888").clone({position = {-29.93, 7.00, -4.19}, rotation = {0.0, 270.0, 0.0}}),       
+        getObjectFromGUID("12e366").clone({position = {-29.93, 7.00, 7.12}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("f6e8f1").clone({position = {-29.93, 7.00, -1.36}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("bc9554").clone({position = {-29.93, 7.00, -6.78}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("29218b").clone({position = {-29.93, 7.00, 1.57}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("021854").clone({position = {-29.93, 7.00, 4.30}, rotation = {0.0, 270.0, 0.0}}),
+        getObjectFromGUID("ecd492").clone({position = {-29.93, 7.00, -4.19}, rotation = {0.0, 270.0, 0.0}}),       
 
-        getObjectFromGUID("36f2bb").clone({position = {0.05, 7.50, -24.01}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("886fd3").clone({position = {-0.03, 7.50, 24.04}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("193831").clone({position = {20.93, 7.50, -12.08}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("0a538b").clone({position = {-20.83, 7.50, 12.02}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("3d1c0e").clone({position = {-20.80, 7.50, -12.07}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("ba88f6").clone({position = {20.82, 7.50, 12.04}, rotation = {21.32, 60.0, 180.0}}),
+        getObjectFromGUID("36f2bb").clone({position = {0.00, 7.50, -24.18}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("886fd3").clone({position = {0.00, 7.50, 24.18}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("193831").clone({position = {20.99, 7.50, -12.06}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("0a538b").clone({position = {-21.06, 7.50, 12.06}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("3d1c0e").clone({position = {-20.96, 7.50, -12.13}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("ba88f6").clone({position = {20.96, 7.50, 12.06}, rotation = {21.32, 60.0, 180.0}}),
 
-        getObjectFromGUID("2c6845").clone({position = {2.42, 7.50, -24.01}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("2562c0").clone({position = {-2.44, 7.50, 24.11}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("b079da").clone({position = {22.10, 7.50, -10.00}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("46a300").clone({position = {-22.16, 7.50, 9.87}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("3bd6cc").clone({position = {-19.58, 7.50, -14.18}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("1aa38c").clone({position = {19.67, 7.50, 14.14}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("2c6845").clone({position = {2.46, 7.50, -24.21}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("2562c0").clone({position = {-2.46, 7.50, 24.21}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("b079da").clone({position = {22.23, 7.50, -9.90}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("46a300").clone({position = {-22.33, 7.50, 9.90}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("3bd6cc").clone({position = {-19.73, 7.50, -14.26}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("1aa38c").clone({position = {19.73, 7.50, 14.2}, rotation = {0.0, 60.0, 180.0}}),
 
         getObjectFromGUID("215b12").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("7c7bc4").clone({position = {1.62, 9.15, 9.17}, rotation = {0.0, 270.0, 0.0}}),
@@ -631,19 +637,19 @@ function LoadRSHL()
         getObjectFromGUID("7e71f1").clone({position = {-12.57, 9.15, -7.42}, rotation = {0.0, 240.0, 0.0}}),
         getObjectFromGUID("8fd99d").clone({position = {12.50, 9.15, 7.62}, rotation = {0.0, 60.0, 0.0}}),
 
-        getObjectFromGUID("d1f6d8").clone({position = {-1.52, 7.50, -23.98}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("0ded19").clone({position = {1.53, 7.50, 24.00}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("142f24").clone({position = {20.13, 7.50, -13.38}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("f38bb2").clone({position = {-20.02, 7.50, 13.49}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("f22ef5").clone({position = {-21.68, 7.50, -10.72}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("cfad59").clone({position = {21.64, 7.50, 10.73}, rotation = {0.0, 60.0, 180.0}}),  
+        getObjectFromGUID("d1f6d8").clone({position = {-1.85, 7.50, -24.17}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("0ded19").clone({position = {1.85, 7.50, 24.17}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("142f24").clone({position = {20.08, 7.50, -13.66}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("f38bb2").clone({position = {-20.08, 7.50, 13.66}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("f22ef5").clone({position = {-21.89, 7.50, -10.53}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("cfad59").clone({position = {21.89, 7.50, 10.49}, rotation = {0.0, 60.0, 180.0}}),  
 
-        getObjectFromGUID("141c18").clone({position = {1.53, 7.50, -23.98}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("1ca8b4").clone({position = {-1.52, 7.50, 24.00}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("877351").clone({position = {21.72, 7.50, -10.72}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("a90c49").clone({position = {-21.59, 7.50, 10.75}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("93d91d").clone({position = {-20.11, 7.50, -13.36}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("21af86").clone({position = {20.10, 7.50, 13.43}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("141c18").clone({position = {1.85, 7.50, -24.22}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("1ca8b4").clone({position = {-1.85, 7.50, 24.22}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("877351").clone({position = {21.93, 7.50, -10.45}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("a90c49").clone({position = {-22.00, 7.50, 10.45}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("93d91d").clone({position = {-20.05, 7.50, -13.72}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("21af86").clone({position = {20.05, 7.50, 13.68}, rotation = {0.0, 60.0, 180.0}}),
 
         getObjectFromGUID("6676ab").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("ed8ffb").clone({position = {1.62, 9.15, 9.17}, rotation = {0.0, 270.0, 0.0}}),
@@ -1026,19 +1032,19 @@ function LoadKUTA()
         getObjectFromGUID("7e71f1").clone({position = {-12.57, 9.15, -7.42}, rotation = {0.0, 240.0, 0.0}}),
         getObjectFromGUID("8fd99d").clone({position = {12.50, 9.15, 7.62}, rotation = {0.0, 60.0, 0.0}}),
 
-        getObjectFromGUID("d1f6d8").clone({position = {-1.52, 7.50, -23.98}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("0ded19").clone({position = {1.53, 7.50, 24.00}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("142f24").clone({position = {20.13, 7.50, -13.38}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("f38bb2").clone({position = {-20.02, 7.50, 13.49}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("f22ef5").clone({position = {-21.68, 7.50, -10.72}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("cfad59").clone({position = {21.64, 7.50, 10.73}, rotation = {0.0, 60.0, 180.0}}),  
+        getObjectFromGUID("d1f6d8").clone({position = {-1.85, 7.50, -24.17}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("0ded19").clone({position = {1.85, 7.50, 24.17}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("142f24").clone({position = {20.08, 7.50, -13.66}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("f38bb2").clone({position = {-20.08, 7.50, 13.66}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("f22ef5").clone({position = {-21.89, 7.50, -10.53}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("cfad59").clone({position = {21.89, 7.50, 10.49}, rotation = {0.0, 60.0, 180.0}}),  
 
-        getObjectFromGUID("141c18").clone({position = {1.53, 7.50, -23.98}, rotation = {0.0, 180.0, 180.0}}),
-        getObjectFromGUID("1ca8b4").clone({position = {-1.52, 7.50, 24.00}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("877351").clone({position = {21.72, 7.50, -10.72}, rotation = {0.0, 120.0, 180.0}}),
-        getObjectFromGUID("a90c49").clone({position = {-21.59, 7.50, 10.75}, rotation = {0.0, 300.0, 180.0}}),
-        getObjectFromGUID("93d91d").clone({position = {-20.11, 7.50, -13.36}, rotation = {0.0, 240.0, 180.0}}),
-        getObjectFromGUID("21af86").clone({position = {20.10, 7.50, 13.43}, rotation = {0.0, 60.0, 180.0}}),
+        getObjectFromGUID("141c18").clone({position = {1.85, 7.50, -24.22}, rotation = {0.0, 180.0, 180.0}}),
+        getObjectFromGUID("1ca8b4").clone({position = {-1.85, 7.50, 24.22}, rotation = {0.0, 0.0, 180.0}}),
+        getObjectFromGUID("877351").clone({position = {21.93, 7.50, -10.45}, rotation = {0.0, 120.0, 180.0}}),
+        getObjectFromGUID("a90c49").clone({position = {-22.00, 7.50, 10.45}, rotation = {0.0, 300.0, 180.0}}),
+        getObjectFromGUID("93d91d").clone({position = {-20.05, 7.50, -13.72}, rotation = {0.0, 240.0, 180.0}}),
+        getObjectFromGUID("21af86").clone({position = {20.05, 7.50, 13.68}, rotation = {0.0, 60.0, 180.0}}),
         
         getObjectFromGUID("78071e").clone({position = {5.46, 9.15, 9.17}, rotation = {0.0, 270.0, 180.0}}),
         getObjectFromGUID("5393b7").clone({position = {-3.15, 9.15, 9.21}, rotation = {0.0, 270.0, 180.0}}),
@@ -1501,10 +1507,12 @@ function LoadKUTA()
                     MakutaDie.locked = false
                     MakutaDie.interactable = true
                     MakutaDie.tooltip = true
+                    MakutaDie.setInvisibleTo()
                     local MakutaBag = getObjectFromGUID("916518")
                     MakutaBag:setPositionSmooth({-36.43, 5.00, -3.00})    
                     MakutaBag.interactable = true
-                    MakutaBag.tooltip = true                                        
+                    MakutaBag.tooltip = true       
+                    MakutaBag.setInvisibleTo()                        
                     local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
                     
                     --Adjust Tags, Tooltip & Shuffle
