@@ -8,10 +8,10 @@ ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '
 '256153', '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
 
 --Force Tag Exclusion
---Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-4, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
+--Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-4, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2, LEGEND 1&2
 TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '9a8753', 'bc2f55', '905bc3', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af','6963c5', '4a83e9',
 '7ffc4c', 'd9b152', '256153', '8bb03e', 'f04318', '933342', '2f73d6', '30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', 
-'80ec51', '4eca5e', 'ff0351'}
+'80ec51', '4eca5e', 'ff0351', 'c9f45c', '8c45a4'}
 
 function onLoad()
     TableFreeze()
@@ -132,6 +132,13 @@ function Cleanup()
     elseif getObjectFromGUID("b9e0f7") ~= nil then
         Manual = getObjectFromGUID("b9e0f7")  
     end
+    
+    --Create Var For Legend
+    if getObjectFromGUID("c9f45c") ~= nil then
+        Legend = getObjectFromGUID("c9f45c")  
+    elseif getObjectFromGUID("8c45a4") ~= nil then
+        Legend = getObjectFromGUID("8c45a4")  
+    end
 
     --Create Var For Tablet
     if getObjectFromGUID("907bd7") ~= nil then
@@ -241,6 +248,9 @@ function LoadQFTM()
     end
     if Manual.getStateId() ~= 1 then
         Manual.setState(1)
+    end    
+    if Legend.getStateId() ~= 1 then
+        Legend.setState(1)
     end
 
     --Clone New Objects
@@ -420,6 +430,9 @@ function LoadBOSW()
     end
     if Manual.getStateId() ~= 2 then
         Manual.setState(2)
+    end
+    if Legend.getStateId() ~= 2 then
+        Legend.setState(2)
     end
 
     --Clone New Objects
@@ -625,6 +638,9 @@ function LoadRSHL()
     end
     if Manual.getStateId() ~= 3 then
         Manual.setState(3)
+    end
+    if Legend.getStateId() ~= 2 then
+        Legend.setState(2)
     end
 
     --Clone New Objects
@@ -1020,6 +1036,9 @@ function LoadKUTA()
     end
     if Manual.getStateId() ~= 4 then
         Manual.setState(4)
+    end
+    if Legend.getStateId() ~= 2 then
+        Legend.setState(2)
     end
 
     --Clone New Objects
