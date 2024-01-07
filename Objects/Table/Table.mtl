@@ -1,9 +1,0 @@
-newmtl Table_Kini
-illum 4
-Kd 0.00 0.00 0.00
-Ka 1.00 1.00 1.00
-Tf 1.00 1.00 1.00
-map_Kd Litestone-QFTM-master\Objects\Table\Textures\Kini_Nui.png
-Ni 1.00
-Ks 0.00 0.00 0.00
-Ns 96.08
