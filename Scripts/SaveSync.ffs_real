@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="REAL" XmlFormat="2">
+    <Directories>
+        <Item>D:\Users\Liam\Documents\My Games\Tabletop Simulator\Saves</Item>
+    </Directories>
+    <Delay>1</Delay>
+    <Commandline>copy "D:\Users\Liam\Documents\My Games\Tabletop Simulator\Saves\TS_Save_11.json" D:\Litestone\source\QuestForTheMasks\Scripts /y</Commandline>
+</FreeFileSync>
