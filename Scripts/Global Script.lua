@@ -1,17 +1,17 @@
 --MegaFreeze: Makes Objects Non-Interactive
 --Object List: TABLE, PILLARS 1-4, GROUND, BOARD 1-4, MAKUTA TABLE, STORAGE TABLE 1 & 2, CARD BOARDS 1-18
-TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', 'a31342', '899089', 'e2d925', 'f01443', '8bb03e', 'f04318', '933342', '2f73d6',
-'30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', '80ec51', '4eca5e', 'ff0351'}
+TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', 'a31342', '899089', 'e2d925', 'f01443', '8bb03e', 'f04318', '933342',
+'2f73d6', '30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', '80ec51', '4eca5e', 'ff0351'}
 
 --Object List: THRACKERZOD, STUDIO TILES 1-4, TAB SOUND 1-3, TAB WIKI, TURNBUTTON 1-8, MODEBUTTON, DEVBUTTON, BOWLS 1-7, BOHROCKS, BOHCAN, BOHLID, BOHROK
-ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '13ca74', '880c5e', 'e8c077', 'bcf9f3', 'c24cdc', '711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153',
-'3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
+ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '13ca74', '880c5e', 'e8c077', 'bcf9f3', 'c24cdc', '711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c',
+'256153', '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
 
 --Force Tag Exclusion
 --Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-4, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
-TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '9a8753', 'bc2f55', '905bc3', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af','6963c5', '4a83e9', '7ffc4c', 
-'d9b152', '256153', '8bb03e', 'f04318', '933342', '2f73d6', '30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', '80ec51', '4eca5e',
-'ff0351'}
+TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '9a8753', 'bc2f55', '905bc3', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af','6963c5', '4a83e9',
+'7ffc4c', 'd9b152', '256153', '8bb03e', 'f04318', '933342', '2f73d6', '30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', 
+'80ec51', '4eca5e', 'ff0351'}
 
 function onLoad()
     TableFreeze()
