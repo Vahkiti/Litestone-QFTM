@@ -37,13 +37,21 @@ function ToggleStorageON()
                         getObjectFromGUID("911407").locked = true     
                         getObjectFromGUID("acdc27").locked = true     
                         getObjectFromGUID("207f49").locked = true                  
+                        getObjectFromGUID("525362").locked = true                  
+                        getObjectFromGUID("7c21a6").locked = true                  
+                        getObjectFromGUID("6bd6da").locked = true                  
+                        getObjectFromGUID("18767f").locked = true                  
+                        getObjectFromGUID("db7783").locked = true                  
+                        getObjectFromGUID("64d888").locked = true                  
+                        getObjectFromGUID("c47080").locked = true                  
+                        getObjectFromGUID("40c402").locked = true                  
                     end,
                     100
                 )                          
             end
         end
     end
-    getObjectFromGUID("e2d925").interactable = true
+    getObjectFromGUID("e2d925").interactable = false
     getObjectFromGUID("e2d925").tooltip = false
     getObjectFromGUID("f01443").interactable = false
     getObjectFromGUID("f01443").tooltip = false   
@@ -68,7 +76,15 @@ function ToggleStorageOFF()
                         getObjectFromGUID("dd6a94").locked = true   
                         getObjectFromGUID("911407").locked = true     
                         getObjectFromGUID("acdc27").locked = true     
-                        getObjectFromGUID("207f49").locked = true                              
+                        getObjectFromGUID("207f49").locked = true   
+                        getObjectFromGUID("525362").locked = true                  
+                        getObjectFromGUID("7c21a6").locked = true                  
+                        getObjectFromGUID("6bd6da").locked = true                  
+                        getObjectFromGUID("18767f").locked = true                  
+                        getObjectFromGUID("db7783").locked = true                  
+                        getObjectFromGUID("64d888").locked = true                  
+                        getObjectFromGUID("c47080").locked = true                  
+                        getObjectFromGUID("40c402").locked = true						
                     end,
                     100
                 )   
