@@ -1,16 +1,17 @@
 --MegaFreeze: Makes Objects Non-Interactive
---Object List: TABLE, PILLARS 1-4, GROUND, BOARD 1-4, , MAKUTA TABLE, STORAGE TABLE 1 & 2, CARD BOARDS 1-6
-TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', 'a31342', '899089', 'e2d925', 'f01443', 'a95f8b', '2f73d6', '80ec51', 'dc7580',
-'8bb03e', 'e33705'}
+--Object List: TABLE, PILLARS 1-4, GROUND, BOARD 1-4, MAKUTA TABLE, STORAGE TABLE 1 & 2, CARD BOARDS 1-18
+TableFreezeLST = {'3d484c', '4724d5', 'a36b1f', '94adc9', '819e91', '0933b5', '24b65c', 'b14653', '368e71', 'a31342', '899089', 'e2d925', 'f01443', '8bb03e', 'f04318', '933342', '2f73d6',
+'30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', '80ec51', '4eca5e', 'ff0351'}
 
 --Object List: THRACKERZOD, STUDIO TILES 1-4, TAB SOUND 1-3, TAB WIKI, TURNBUTTON 1-8, MODEBUTTON, DEVBUTTON, BOWLS 1-7, BOHROCKS, BOHCAN, BOHLID, BOHROK
-ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '13ca74', '880c5e', 'e8c077','bcf9f3', 'c24cdc', '711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153',
+ObjectFreezeLST = {'bf8821', '46e314', 'ff04f2', '41c648', '45b939', '907bd7', '13ca74', '880c5e', 'e8c077', 'bcf9f3', 'c24cdc', '711e18', '5c3ca6', '46ff68', '49bea0', '7ffc4c', '256153',
 '3bb2af', '4a83e9', 'c673c7', 'a82aae','533164', 'd5ed8f', '673189', '49fc51', 'a7d9de', '3b0f24', '0bf751', '8109ec', '1971d9'}
 
 --Force Tag Exclusion
 --Object List: BOARD 1-4, TAB SOUND 1-3, MAN 1-4, LORE, BOHCAN, MODEBUTTON 1&2, DEVBUTTON 1&2, MAKUTA BUTTON 1 & 2
-TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '70b6a8', '845f3b', '50c571', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af','6963c5', '4a83e9', '7ffc4c', 
-'d9b152', '256153'}
+TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '880c5e', '9a8753', 'bc2f55', '905bc3', 'b9e0f7',  'c9f45c', '0bf751', '3bb2af','6963c5', '4a83e9', '7ffc4c', 
+'d9b152', '256153', '8bb03e', 'f04318', '933342', '2f73d6', '30b897', '764c87', 'dc7580', '4f464f', '151f14', 'a95f8b', '45b064', '3b5c3c', 'e33705', '39317b', '393c29', '80ec51', '4eca5e',
+'ff0351'}
 
 function onLoad()
     TableFreeze()
@@ -67,14 +68,63 @@ function Cleanup()
     elseif getObjectFromGUID("a31342") ~= nil then
         Board = getObjectFromGUID("a31342")
     end
-
+    
+    --Create Var For Toa Boards
+    if getObjectFromGUID("8bb03e") ~= nil then
+        TahuBoard = getObjectFromGUID("8bb03e")
+    elseif getObjectFromGUID("f04318") ~= nil then
+        TahuBoard = getObjectFromGUID("f04318")
+    elseif getObjectFromGUID("933342") ~= nil then
+        TahuBoard = getObjectFromGUID("933342")
+    end
+    
+    if getObjectFromGUID("2f73d6") ~= nil then
+        OnuaBoard = getObjectFromGUID("2f73d6")
+    elseif getObjectFromGUID("30b897") ~= nil then
+        OnuaBoard = getObjectFromGUID("30b897")
+    elseif getObjectFromGUID("764c87") ~= nil then
+        OnuaBoard = getObjectFromGUID("764c87")
+    end
+    
+    if getObjectFromGUID("dc7580") ~= nil then
+        PohatuBoard = getObjectFromGUID("dc7580")
+    elseif getObjectFromGUID("4f464f") ~= nil then
+        PohatuBoard = getObjectFromGUID("4f464f")
+    elseif getObjectFromGUID("151f14") ~= nil then
+        PohatuBoard = getObjectFromGUID("151f14")
+    end
+    
+    if getObjectFromGUID("a95f8b") ~= nil then
+        KopakaBoard = getObjectFromGUID("a95f8b")
+    elseif getObjectFromGUID("45b064") ~= nil then
+        KopakaBoard = getObjectFromGUID("45b064")
+    elseif getObjectFromGUID("3b5c3c") ~= nil then
+        KopakaBoard = getObjectFromGUID("3b5c3c")
+    end
+    
+    if getObjectFromGUID("e33705") ~= nil then
+        LewaBoard = getObjectFromGUID("e33705")
+    elseif getObjectFromGUID("39317b") ~= nil then
+        LewaBoard = getObjectFromGUID("39317b")
+    elseif getObjectFromGUID("393c29") ~= nil then
+        LewaBoard = getObjectFromGUID("393c29")
+    end
+    
+    if getObjectFromGUID("80ec51") ~= nil then
+        GaliBoard = getObjectFromGUID("80ec51")
+    elseif getObjectFromGUID("4eca5e") ~= nil then
+        GaliBoard = getObjectFromGUID("4eca5e")
+    elseif getObjectFromGUID("ff0351") ~= nil then
+        GaliBoard = getObjectFromGUID("ff0351")
+    end
+    
     --Create Var For Manual
-    if getObjectFromGUID("70b6a8") ~= nil then
-        Manual = getObjectFromGUID("70b6a8")
-    elseif getObjectFromGUID("845f3b") ~= nil then
-        Manual = getObjectFromGUID("845f3b")        
-    elseif getObjectFromGUID("50c571") ~= nil then
-        Manual = getObjectFromGUID("50c571")      
+    if getObjectFromGUID("9a8753") ~= nil then
+        Manual = getObjectFromGUID("9a8753")
+    elseif getObjectFromGUID("bc2f55") ~= nil then
+        Manual = getObjectFromGUID("bc2f55")        
+    elseif getObjectFromGUID("905bc3") ~= nil then
+        Manual = getObjectFromGUID("905bc3")      
     elseif getObjectFromGUID("b9e0f7") ~= nil then
         Manual = getObjectFromGUID("b9e0f7")  
     end
@@ -161,6 +211,24 @@ function LoadQFTM()
     --Set Object States
     if Board.getStateId() ~= 1 then
         Board.setState(1)
+    end
+    if TahuBoard.getStateId() ~= 1 then
+        TahuBoard.setState(1)
+    end
+    if OnuaBoard.getStateId() ~= 1 then
+        OnuaBoard.setState(1)
+    end
+    if PohatuBoard.getStateId() ~= 1 then
+        PohatuBoard.setState(1)
+    end
+    if KopakaBoard.getStateId() ~= 1 then
+        KopakaBoard.setState(1)
+    end
+    if LewaBoard.getStateId() ~= 1 then
+        LewaBoard.setState(1)
+    end
+    if GaliBoard.getStateId() ~= 1 then
+        GaliBoard.setState(1)
     end
     if Tablet.getStateId() ~= 1 then
         Tablet.setState(1)
@@ -322,6 +390,24 @@ function LoadBOSW()
     --Set Object States/Bohrok Launch
     if Board.getStateId() ~= 2 then
         Board.setState(2)
+    end
+    if TahuBoard.getStateId() ~= 2 then
+        TahuBoard.setState(2)
+    end
+    if OnuaBoard.getStateId() ~= 2 then
+        OnuaBoard.setState(2)
+    end
+    if PohatuBoard.getStateId() ~= 2 then
+        PohatuBoard.setState(2)
+    end
+    if KopakaBoard.getStateId() ~= 2 then
+        KopakaBoard.setState(2)
+    end
+    if LewaBoard.getStateId() ~= 2 then
+        LewaBoard.setState(2)
+    end
+    if GaliBoard.getStateId() ~= 2 then
+        GaliBoard.setState(2)
     end
     if Tablet.getStateId() ~= 2 then
         Tablet.setState(2)
@@ -510,6 +596,24 @@ function LoadRSHL()
     if Board.getStateId() ~= 3 then
         Board.setState(3)
     end    
+    if TahuBoard.getStateId() ~= 3 then
+        TahuBoard.setState(3)
+    end
+    if OnuaBoard.getStateId() ~= 3 then
+        OnuaBoard.setState(3)
+    end
+    if PohatuBoard.getStateId() ~= 3 then
+        PohatuBoard.setState(3)
+    end
+    if KopakaBoard.getStateId() ~= 3 then
+        KopakaBoard.setState(3)
+    end
+    if LewaBoard.getStateId() ~= 3 then
+        LewaBoard.setState(3)
+    end
+    if GaliBoard.getStateId() ~= 3 then
+        GaliBoard.setState(3)
+    end
     if Tablet.getStateId() ~= 3 then
         Tablet.setState(3)
     end
@@ -887,6 +991,24 @@ function LoadKUTA()
     if Board.getStateId() ~= 4 then
         Board.setState(4)
     end    
+    if TahuBoard.getStateId() ~= 3 then
+        TahuBoard.setState(3)
+    end
+    if OnuaBoard.getStateId() ~= 3 then
+        OnuaBoard.setState(3)
+    end
+    if PohatuBoard.getStateId() ~= 3 then
+        PohatuBoard.setState(3)
+    end
+    if KopakaBoard.getStateId() ~= 3 then
+        KopakaBoard.setState(3)
+    end
+    if LewaBoard.getStateId() ~= 3 then
+        LewaBoard.setState(3)
+    end
+    if GaliBoard.getStateId() ~= 3 then
+        GaliBoard.setState(3)
+    end
     if Tablet.getStateId() ~= 3 then
         Tablet.setState(3)
     end
