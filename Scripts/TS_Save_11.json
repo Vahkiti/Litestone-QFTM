@@ -85195,7 +85195,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85249,7 +85249,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85303,7 +85303,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85357,7 +85357,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85411,7 +85411,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85465,7 +85465,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85519,7 +85519,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85573,7 +85573,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85627,7 +85627,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85681,7 +85681,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85735,7 +85735,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85789,7 +85789,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuGoldBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85843,7 +85843,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85897,7 +85897,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -85951,7 +85951,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86005,7 +86005,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86059,7 +86059,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86113,7 +86113,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuNuvaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86581,7 +86581,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86635,7 +86635,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -86686,7 +86686,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/TahuNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -86739,7 +86739,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86790,7 +86790,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -86841,7 +86841,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/OnuaNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -86894,7 +86894,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -86945,7 +86945,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -86996,7 +86996,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/PohatuNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87049,7 +87049,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -87100,7 +87100,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87151,7 +87151,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/KopakaNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87204,7 +87204,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -87255,7 +87255,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87306,7 +87306,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/LewaNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87359,7 +87359,7 @@
         "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliBoard.jpg",
         "ImageSecondaryURL": "",
         "ImageScalar": 1.0,
-        "WidthScale": 2.0
+        "WidthScale": 1.0
       },
       "LuaScript": "",
       "LuaScriptState": "",
@@ -87410,7 +87410,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliGoldBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
@@ -87461,7 +87461,7 @@
             "ImageURL": "https://github.com/Vahkiti/Litestone-QFTM/raw/master/Objects/Board/Textures/GaliNuvaBoard.jpg",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
-            "WidthScale": 2.0
+            "WidthScale": 1.0
           },
           "LuaScript": "",
           "LuaScriptState": "",
