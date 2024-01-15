@@ -14,12 +14,14 @@ TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '
 '80ec51', '4eca5e', 'ff0351', 'c9f45c', '8c45a4'}
 
 function onLoad()
+    local MakutaDie = getObjectFromGUID("26a094")
+    local MakutaBag = getObjectFromGUID("916518")
     TableFreeze()
     ObjectFreeze()
     SetStorage()
-    --Cleanup()
     --MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
-    --MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})    
+    --MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})   
+    --Cleanup() 
 end
 
 function TableFreeze()
@@ -40,8 +42,6 @@ function ObjectFreeze()
             obj.tooltip = false
         end
     end
-    local MakutaDie = getObjectFromGUID("26a094")
-    local MakutaBag = getObjectFromGUID("916518")
 end
 
 function SetStorage()
