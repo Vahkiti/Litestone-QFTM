@@ -18,6 +18,8 @@ function onLoad()
     ObjectFreeze()
     SetStorage()
     --Cleanup()
+    --MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
+    --MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})    
 end
 
 function TableFreeze()
@@ -40,8 +42,6 @@ function ObjectFreeze()
     end
     local MakutaDie = getObjectFromGUID("26a094")
     local MakutaBag = getObjectFromGUID("916518")
-    MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
-    MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})    
 end
 
 function SetStorage()
@@ -1081,7 +1081,7 @@ function LoadKUTA()
         getObjectFromGUID("d929aa").clone({position = {13.70, 11.00, -1.67}, rotation = {0.0, 0.0, 0.0}}), 
 
         getObjectFromGUID("3e59d0").clone({position = {13.48, 11.50, 1.83}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("d7c8cf").clone({position = {13.48, 12.00, 1.83}, rotation = {0.0, 0.0, 180.0}})         
+        getObjectFromGUID("443a67").clone({position = {13.48, 12.00, 1.83}, rotation = {0.0, 0.0, 180.0}})         
     }
     
     --Add/Replace Meme Cards
