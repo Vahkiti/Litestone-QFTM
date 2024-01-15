@@ -25,6 +25,7 @@ function ToggleStorageON()
             if object.hasTag("Dev") then                
                 object.interactable = true
                 object.tooltip = true
+                object.gizmo_selectable = true
                 object.locked = true
                 object.setPositionSmooth(object.getPosition() + vector(100, 0, 0))
                 Wait.frames(
@@ -53,8 +54,10 @@ function ToggleStorageON()
     end
     getObjectFromGUID("e2d925").interactable = false
     getObjectFromGUID("e2d925").tooltip = false
+    getObjectFromGUID("e2d925").gizmo_selectable = false
     getObjectFromGUID("f01443").interactable = false
     getObjectFromGUID("f01443").tooltip = false   
+    getObjectFromGUID("f01443").gizmo_selectable = false   
     getObjectFromGUID("e2d925").addTag("DEVACTIVE")
     self.setState(2)
 end
@@ -65,6 +68,7 @@ function ToggleStorageOFF()
             if object.hasTag("Dev") then
                 object.interactable = false
                 object.tooltip = false
+                object.gizmo_selectable = false
                 object.locked = true
                 object.setPositionSmooth(object.getPosition() + vector(-100, 0, 0))
                 Wait.frames(
@@ -84,7 +88,7 @@ function ToggleStorageOFF()
                         getObjectFromGUID("db7783").locked = true                  
                         getObjectFromGUID("64d888").locked = true                  
                         getObjectFromGUID("c47080").locked = true                  
-                        getObjectFromGUID("40c402").locked = true						
+                        getObjectFromGUID("40c402").locked = true                        
                     end,
                     100
                 )   
@@ -93,8 +97,10 @@ function ToggleStorageOFF()
     end
     getObjectFromGUID("e2d925").interactable = false
     getObjectFromGUID("e2d925").tooltip = false
+    getObjectFromGUID("e2d925").gizmo_selectable = false
     getObjectFromGUID("f01443").interactable = false
     getObjectFromGUID("f01443").tooltip = false
+    getObjectFromGUID("f01443").gizmo_selectable = false
     getObjectFromGUID("e2d925").addTag("DEVINACTIVE")
     self.setState(2)
 end
