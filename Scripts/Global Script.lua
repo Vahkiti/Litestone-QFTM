@@ -14,10 +14,14 @@ TagExclusionLST = {'24b65c', 'b14653', '368e71', 'a31342', '907bd7', '13ca74', '
 '80ec51', '4eca5e', 'ff0351', 'c9f45c', '8c45a4'}
 
 function onLoad()
+    local MakutaDie = getObjectFromGUID("26a094")
+    local MakutaBag = getObjectFromGUID("916518")
     TableFreeze()
     ObjectFreeze()
     SetStorage()
-    --Cleanup()
+    --MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
+    --MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})   
+    --Cleanup() 
 end
 
 function TableFreeze()
@@ -26,6 +30,7 @@ function TableFreeze()
         if obj ~= nil then
             obj.interactable = false
             obj.tooltip = false
+			obj.gizmo_selectable  = false
         end
     end
 end
@@ -36,12 +41,9 @@ function ObjectFreeze()
         if obj ~= nil then
             obj.interactable = false
             obj.tooltip = false
+			obj.gizmo_selectable  = false
         end
     end
-    local MakutaDie = getObjectFromGUID("26a094")
-    local MakutaBag = getObjectFromGUID("916518")
-    MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})
-    MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange'})    
 end
 
 function SetStorage()
@@ -51,13 +53,16 @@ function SetStorage()
                 if object.hasTag("Dev") then
                     object.interactable = false
                     object.tooltip = false
+					object.gizmo_selectable  = false
                 end
             end
         end
         getObjectFromGUID("e2d925").interactable = false
         getObjectFromGUID("e2d925").tooltip = false
+        getObjectFromGUID("e2d925").gizmo_selectable = false
         getObjectFromGUID("f01443").interactable = false
         getObjectFromGUID("f01443").tooltip = false
+        getObjectFromGUID("f01443").gizmo_selectable = false
     end
 end
 
@@ -187,12 +192,14 @@ function Cleanup()
     MakutaDie.locked = true
     MakutaDie.interactable = false
     MakutaDie.tooltip = false
+    MakutaDie.gizmo_selectable = false
     MakutaDie.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange', 'Grey', 'Black'})
     local MakutaBag = getObjectFromGUID("916518")
     MakutaBag:setPosition({-36.42, -17.0, -3.00})
     MakutaBag.locked = true
     MakutaBag.interactable = false
     MakutaBag.tooltip = false
+    MakutaBag.gizmo_selectable = false
     MakutaBag.setInvisibleTo({'Red', 'Green', 'White', 'Purple', 'Blue', 'Brown', 'Orange', 'Grey', 'Black'})
     if getObjectFromGUID("7ffc4c") ~= nil then
         getObjectFromGUID("7ffc4c").setState(2)
@@ -349,6 +356,7 @@ function LoadQFTM()
                 Canisters[i].setScale({1.0, 1.0, 1.0})
                 Canisters[i].interactable = false
                 Canisters[i].tooltip = false
+                Canisters[i].gizmo_selectable = false
                 Canisters[i].removeTag("Dev")
             end,
             1
@@ -533,6 +541,7 @@ function LoadBOSW()
                 Canisters[i].setScale({1.0, 1.0, 1.0})
                 Canisters[i].interactable = false
                 Canisters[i].tooltip = false
+                Canisters[i].gizmo_selectable = false
                 Canisters[i].removeTag("Dev")
             end,
             1
@@ -606,6 +615,7 @@ function LoadBOSW()
     ObjectFreeze()
     BohrokCL.interactable = true
     BohrokCL.tooltip = true
+    BohrokCL.gizmo_selectable = true
 end
 
 function LoadRSHL()
@@ -1004,6 +1014,7 @@ function LoadRSHL()
     ObjectFreeze()
     BohrokCL.interactable = true
     BohrokCL.tooltip = true
+    BohrokCL.gizmo_selectable = true
 end
 
 function LoadKUTA()
@@ -1081,7 +1092,7 @@ function LoadKUTA()
         getObjectFromGUID("d929aa").clone({position = {13.70, 11.00, -1.67}, rotation = {0.0, 0.0, 0.0}}), 
 
         getObjectFromGUID("3e59d0").clone({position = {13.48, 11.50, 1.83}, rotation = {0.0, 0.0, 180.0}}),
-        getObjectFromGUID("d7c8cf").clone({position = {13.48, 12.00, 1.83}, rotation = {0.0, 0.0, 180.0}})         
+        getObjectFromGUID("443a67").clone({position = {13.48, 12.00, 1.83}, rotation = {0.0, 0.0, 180.0}})         
     }
     
     --Add/Replace Meme Cards
@@ -1526,11 +1537,13 @@ function LoadKUTA()
                     MakutaDie.locked = false
                     MakutaDie.interactable = true
                     MakutaDie.tooltip = true
+                    MakutaDie.gizmo_selectable = true
                     MakutaDie.setInvisibleTo()
                     local MakutaBag = getObjectFromGUID("916518")
                     MakutaBag:setPositionSmooth({-36.43, 5.00, -3.00})    
                     MakutaBag.interactable = true
                     MakutaBag.tooltip = true       
+                    MakutaBag.gizmo_selectable = true       
                     MakutaBag.setInvisibleTo()                        
                     local MakutaTable = getObjectFromGUID("899089"):setPositionSmooth({-36.00, -5.0, 0.0})
                     

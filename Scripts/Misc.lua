@@ -2,6 +2,7 @@
 function onLoad()
     self.interactable = false
     self.tooltip = false
+    self.gizmo_selectable = false
 end
 
 --Ground
