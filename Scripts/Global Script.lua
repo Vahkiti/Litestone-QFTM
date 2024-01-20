@@ -495,7 +495,7 @@ function LoadBOSW()
 
         getObjectFromGUID("d929aa").clone({position = {13.70, 11.00, -1.67}, rotation = {0.0, 0.0, 0.0}}), 
 
-        getObjectFromGUID("4db4e7").clone({position = {13.48, 11.50, 1.83}, rotation = {0.0, 0.0, 180.0}})  
+        getObjectFromGUID("9bdf8b").clone({position = {13.48, 11.50, 1.83}, rotation = {0.0, 0.0, 180.0}})  
     }
 
     --Move Studio Tiles
